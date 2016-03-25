@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D07696BB1CA5D9FF001DF6B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07696BA1CA5D9FF001DF6B7 /* AppDelegate.swift */; };
+		D07696BD1CA5D9FF001DF6B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07696BC1CA5D9FF001DF6B7 /* ViewController.swift */; };
+		D07696C01CA5D9FF001DF6B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D07696BE1CA5D9FF001DF6B7 /* Main.storyboard */; };
+		D07696C31CA5D9FF001DF6B7 /* PlantAHabit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D07696C11CA5D9FF001DF6B7 /* PlantAHabit.xcdatamodeld */; };
+		D07696C51CA5D9FF001DF6B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D07696C41CA5D9FF001DF6B7 /* Assets.xcassets */; };
+		D07696C81CA5D9FF001DF6B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D07696C61CA5D9FF001DF6B7 /* LaunchScreen.storyboard */; };
+		D07696D31CA5D9FF001DF6B7 /* PlantAHabitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07696D21CA5D9FF001DF6B7 /* PlantAHabitTests.swift */; };
+		D07696DE1CA5D9FF001DF6B7 /* PlantAHabitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07696DD1CA5D9FF001DF6B7 /* PlantAHabitUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D07696CF1CA5D9FF001DF6B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D07696AF1CA5D9FF001DF6B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D07696B61CA5D9FF001DF6B7;
+			remoteInfo = PlantAHabit;
+		};
+		D07696DA1CA5D9FF001DF6B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D07696AF1CA5D9FF001DF6B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D07696B61CA5D9FF001DF6B7;
+			remoteInfo = PlantAHabit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D07696B71CA5D9FF001DF6B7 /* PlantAHabit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantAHabit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D07696BA1CA5D9FF001DF6B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D07696BC1CA5D9FF001DF6B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D07696BF1CA5D9FF001DF6B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D07696C21CA5D9FF001DF6B7 /* PlantAHabit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlantAHabit.xcdatamodel; sourceTree = "<group>"; };
+		D07696C41CA5D9FF001DF6B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D07696C71CA5D9FF001DF6B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D07696C91CA5D9FF001DF6B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D07696CE1CA5D9FF001DF6B7 /* PlantAHabitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantAHabitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D07696D21CA5D9FF001DF6B7 /* PlantAHabitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantAHabitTests.swift; sourceTree = "<group>"; };
+		D07696D41CA5D9FF001DF6B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D07696D91CA5D9FF001DF6B7 /* PlantAHabitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantAHabitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D07696DD1CA5D9FF001DF6B7 /* PlantAHabitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantAHabitUITests.swift; sourceTree = "<group>"; };
+		D07696DF1CA5D9FF001DF6B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D07696B41CA5D9FF001DF6B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D07696CB1CA5D9FF001DF6B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D07696D61CA5D9FF001DF6B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D07696AE1CA5D9FF001DF6B7 = {
+			isa = PBXGroup;
+			children = (
+				D07696B91CA5D9FF001DF6B7 /* PlantAHabit */,
+				D07696D11CA5D9FF001DF6B7 /* PlantAHabitTests */,
+				D07696DC1CA5D9FF001DF6B7 /* PlantAHabitUITests */,
+				D07696B81CA5D9FF001DF6B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D07696B81CA5D9FF001DF6B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D07696B71CA5D9FF001DF6B7 /* PlantAHabit.app */,
+				D07696CE1CA5D9FF001DF6B7 /* PlantAHabitTests.xctest */,
+				D07696D91CA5D9FF001DF6B7 /* PlantAHabitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D07696B91CA5D9FF001DF6B7 /* PlantAHabit */ = {
+			isa = PBXGroup;
+			children = (
+				D07696BA1CA5D9FF001DF6B7 /* AppDelegate.swift */,
+				D07696BC1CA5D9FF001DF6B7 /* ViewController.swift */,
+				D07696BE1CA5D9FF001DF6B7 /* Main.storyboard */,
+				D07696C41CA5D9FF001DF6B7 /* Assets.xcassets */,
+				D07696C61CA5D9FF001DF6B7 /* LaunchScreen.storyboard */,
+				D07696C91CA5D9FF001DF6B7 /* Info.plist */,
+				D07696C11CA5D9FF001DF6B7 /* PlantAHabit.xcdatamodeld */,
+			);
+			path = PlantAHabit;
+			sourceTree = "<group>";
+		};
+		D07696D11CA5D9FF001DF6B7 /* PlantAHabitTests */ = {
+			isa = PBXGroup;
+			children = (
+				D07696D21CA5D9FF001DF6B7 /* PlantAHabitTests.swift */,
+				D07696D41CA5D9FF001DF6B7 /* Info.plist */,
+			);
+			path = PlantAHabitTests;
+			sourceTree = "<group>";
+		};
+		D07696DC1CA5D9FF001DF6B7 /* PlantAHabitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D07696DD1CA5D9FF001DF6B7 /* PlantAHabitUITests.swift */,
+				D07696DF1CA5D9FF001DF6B7 /* Info.plist */,
+			);
+			path = PlantAHabitUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D07696B61CA5D9FF001DF6B7 /* PlantAHabit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D07696E21CA5D9FF001DF6B7 /* Build configuration list for PBXNativeTarget "PlantAHabit" */;
+			buildPhases = (
+				D07696B31CA5D9FF001DF6B7 /* Sources */,
+				D07696B41CA5D9FF001DF6B7 /* Frameworks */,
+				D07696B51CA5D9FF001DF6B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlantAHabit;
+			productName = PlantAHabit;
+			productReference = D07696B71CA5D9FF001DF6B7 /* PlantAHabit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D07696CD1CA5D9FF001DF6B7 /* PlantAHabitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D07696E51CA5D9FF001DF6B7 /* Build configuration list for PBXNativeTarget "PlantAHabitTests" */;
+			buildPhases = (
+				D07696CA1CA5D9FF001DF6B7 /* Sources */,
+				D07696CB1CA5D9FF001DF6B7 /* Frameworks */,
+				D07696CC1CA5D9FF001DF6B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D07696D01CA5D9FF001DF6B7 /* PBXTargetDependency */,
+			);
+			name = PlantAHabitTests;
+			productName = PlantAHabitTests;
+			productReference = D07696CE1CA5D9FF001DF6B7 /* PlantAHabitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D07696D81CA5D9FF001DF6B7 /* PlantAHabitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D07696E81CA5D9FF001DF6B7 /* Build configuration list for PBXNativeTarget "PlantAHabitUITests" */;
+			buildPhases = (
+				D07696D51CA5D9FF001DF6B7 /* Sources */,
+				D07696D61CA5D9FF001DF6B7 /* Frameworks */,
+				D07696D71CA5D9FF001DF6B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D07696DB1CA5D9FF001DF6B7 /* PBXTargetDependency */,
+			);
+			name = PlantAHabitUITests;
+			productName = PlantAHabitUITests;
+			productReference = D07696D91CA5D9FF001DF6B7 /* PlantAHabitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D07696AF1CA5D9FF001DF6B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Ya Kao";
+				TargetAttributes = {
+					D07696B61CA5D9FF001DF6B7 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					D07696CD1CA5D9FF001DF6B7 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = D07696B61CA5D9FF001DF6B7;
+					};
+					D07696D81CA5D9FF001DF6B7 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = D07696B61CA5D9FF001DF6B7;
+					};
+				};
+			};
+			buildConfigurationList = D07696B21CA5D9FF001DF6B7 /* Build configuration list for PBXProject "PlantAHabit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D07696AE1CA5D9FF001DF6B7;
+			productRefGroup = D07696B81CA5D9FF001DF6B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D07696B61CA5D9FF001DF6B7 /* PlantAHabit */,
+				D07696CD1CA5D9FF001DF6B7 /* PlantAHabitTests */,
+				D07696D81CA5D9FF001DF6B7 /* PlantAHabitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D07696B51CA5D9FF001DF6B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D07696C81CA5D9FF001DF6B7 /* LaunchScreen.storyboard in Resources */,
+				D07696C51CA5D9FF001DF6B7 /* Assets.xcassets in Resources */,
+				D07696C01CA5D9FF001DF6B7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D07696CC1CA5D9FF001DF6B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D07696D71CA5D9FF001DF6B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D07696B31CA5D9FF001DF6B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D07696BD1CA5D9FF001DF6B7 /* ViewController.swift in Sources */,
+				D07696BB1CA5D9FF001DF6B7 /* AppDelegate.swift in Sources */,
+				D07696C31CA5D9FF001DF6B7 /* PlantAHabit.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D07696CA1CA5D9FF001DF6B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D07696D31CA5D9FF001DF6B7 /* PlantAHabitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D07696D51CA5D9FF001DF6B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D07696DE1CA5D9FF001DF6B7 /* PlantAHabitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D07696D01CA5D9FF001DF6B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D07696B61CA5D9FF001DF6B7 /* PlantAHabit */;
+			targetProxy = D07696CF1CA5D9FF001DF6B7 /* PBXContainerItemProxy */;
+		};
+		D07696DB1CA5D9FF001DF6B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D07696B61CA5D9FF001DF6B7 /* PlantAHabit */;
+			targetProxy = D07696DA1CA5D9FF001DF6B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D07696BE1CA5D9FF001DF6B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D07696BF1CA5D9FF001DF6B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D07696C61CA5D9FF001DF6B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D07696C71CA5D9FF001DF6B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D07696E01CA5D9FF001DF6B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D07696E11CA5D9FF001DF6B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D07696E31CA5D9FF001DF6B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PlantAHabit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yabetsykao.PlantAHabit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D07696E41CA5D9FF001DF6B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PlantAHabit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yabetsykao.PlantAHabit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D07696E61CA5D9FF001DF6B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PlantAHabitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yabetsykao.PlantAHabitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlantAHabit.app/PlantAHabit";
+			};
+			name = Debug;
+		};
+		D07696E71CA5D9FF001DF6B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PlantAHabitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yabetsykao.PlantAHabitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlantAHabit.app/PlantAHabit";
+			};
+			name = Release;
+		};
+		D07696E91CA5D9FF001DF6B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PlantAHabitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yabetsykao.PlantAHabitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PlantAHabit;
+			};
+			name = Debug;
+		};
+		D07696EA1CA5D9FF001DF6B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PlantAHabitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yabetsykao.PlantAHabitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PlantAHabit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D07696B21CA5D9FF001DF6B7 /* Build configuration list for PBXProject "PlantAHabit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D07696E01CA5D9FF001DF6B7 /* Debug */,
+				D07696E11CA5D9FF001DF6B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D07696E21CA5D9FF001DF6B7 /* Build configuration list for PBXNativeTarget "PlantAHabit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D07696E31CA5D9FF001DF6B7 /* Debug */,
+				D07696E41CA5D9FF001DF6B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D07696E51CA5D9FF001DF6B7 /* Build configuration list for PBXNativeTarget "PlantAHabitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D07696E61CA5D9FF001DF6B7 /* Debug */,
+				D07696E71CA5D9FF001DF6B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D07696E81CA5D9FF001DF6B7 /* Build configuration list for PBXNativeTarget "PlantAHabitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D07696E91CA5D9FF001DF6B7 /* Debug */,
+				D07696EA1CA5D9FF001DF6B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D07696C11CA5D9FF001DF6B7 /* PlantAHabit.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D07696C21CA5D9FF001DF6B7 /* PlantAHabit.xcdatamodel */,
+			);
+			currentVersion = D07696C21CA5D9FF001DF6B7 /* PlantAHabit.xcdatamodel */;
+			path = PlantAHabit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D07696AF1CA5D9FF001DF6B7 /* Project object */;
+}
