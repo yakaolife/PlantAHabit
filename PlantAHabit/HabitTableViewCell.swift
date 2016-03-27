@@ -8,7 +8,8 @@
 
 import UIKit
 
-class HabitTableViewCell: UITableViewCell {
+
+class HabitTableViewCell: SWTableViewCell {
 
     @IBOutlet weak var plantImage: UIImageView!
     @IBOutlet weak var habitTitle: UILabel!

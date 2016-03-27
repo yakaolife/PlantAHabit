@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89E195D3EF623377F61FA9CE /* libPods-PlantAHabit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D860DEEC9AB50CBE709AF5 /* libPods-PlantAHabit.a */; };
 		D07696BB1CA5D9FF001DF6B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07696BA1CA5D9FF001DF6B7 /* AppDelegate.swift */; };
 		D07696C01CA5D9FF001DF6B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D07696BE1CA5D9FF001DF6B7 /* Main.storyboard */; };
 		D07696C31CA5D9FF001DF6B7 /* PlantAHabit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D07696C11CA5D9FF001DF6B7 /* PlantAHabit.xcdatamodeld */; };
@@ -48,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5585F96FBF74DA100F523512 /* Pods-PlantAHabit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantAHabit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlantAHabit/Pods-PlantAHabit.debug.xcconfig"; sourceTree = "<group>"; };
+		AFAEB530093409B8972088DA /* Pods-PlantAHabit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantAHabit.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlantAHabit/Pods-PlantAHabit.release.xcconfig"; sourceTree = "<group>"; };
+		D00ACE601CA854220069CAD7 /* PlantAHabit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlantAHabit-Bridging-Header.h"; sourceTree = "<group>"; };
 		D07696B71CA5D9FF001DF6B7 /* PlantAHabit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantAHabit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07696BA1CA5D9FF001DF6B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D07696BF1CA5D9FF001DF6B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 		D0FD04D01CA71CCD000D2818 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 		D0FD04D21CA72C07000D2818 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D0FD04D41CA76BE4000D2818 /* PAHDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAHDataStore.swift; sourceTree = "<group>"; };
+		F2D860DEEC9AB50CBE709AF5 /* libPods-PlantAHabit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlantAHabit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89E195D3EF623377F61FA9CE /* libPods-PlantAHabit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C1FAA67506306008D943723 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2D860DEEC9AB50CBE709AF5 /* libPods-PlantAHabit.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D07696AE1CA5D9FF001DF6B7 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +123,8 @@
 				D07696D11CA5D9FF001DF6B7 /* PlantAHabitTests */,
 				D07696DC1CA5D9FF001DF6B7 /* PlantAHabitUITests */,
 				D07696B81CA5D9FF001DF6B7 /* Products */,
+				DF2B03AC0264D02F1D5DEC23 /* Pods */,
+				5C1FAA67506306008D943723 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +144,7 @@
 				D07696EC1CA60201001DF6B7 /* ViewController */,
 				D07696EB1CA601FA001DF6B7 /* Model */,
 				D07696BA1CA5D9FF001DF6B7 /* AppDelegate.swift */,
+				D00ACE601CA854220069CAD7 /* PlantAHabit-Bridging-Header.h */,
 				D07696BE1CA5D9FF001DF6B7 /* Main.storyboard */,
 				D0FD04C91CA71904000D2818 /* Image */,
 				D07696C41CA5D9FF001DF6B7 /* Assets.xcassets */,
@@ -191,6 +208,15 @@
 			name = Image;
 			sourceTree = "<group>";
 		};
+		DF2B03AC0264D02F1D5DEC23 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5585F96FBF74DA100F523512 /* Pods-PlantAHabit.debug.xcconfig */,
+				AFAEB530093409B8972088DA /* Pods-PlantAHabit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -198,9 +224,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D07696E21CA5D9FF001DF6B7 /* Build configuration list for PBXNativeTarget "PlantAHabit" */;
 			buildPhases = (
+				6ADF0C0A7B02F8FEB6AFEECE /* Check Pods Manifest.lock */,
 				D07696B31CA5D9FF001DF6B7 /* Sources */,
 				D07696B41CA5D9FF001DF6B7 /* Frameworks */,
 				D07696B51CA5D9FF001DF6B7 /* Resources */,
+				EE0F3D22E45789C8C87669A8 /* Embed Pods Frameworks */,
+				5DC05C1A894D3246B2955B05 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -319,6 +348,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5DC05C1A894D3246B2955B05 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlantAHabit/Pods-PlantAHabit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6ADF0C0A7B02F8FEB6AFEECE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EE0F3D22E45789C8C87669A8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlantAHabit/Pods-PlantAHabit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D07696B31CA5D9FF001DF6B7 /* Sources */ = {
@@ -479,23 +556,30 @@
 		};
 		D07696E31CA5D9FF001DF6B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5585F96FBF74DA100F523512 /* Pods-PlantAHabit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PlantAHabit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yabetsykao.PlantAHabit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PlantAHabit/PlantAHabit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		D07696E41CA5D9FF001DF6B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFAEB530093409B8972088DA /* Pods-PlantAHabit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PlantAHabit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yabetsykao.PlantAHabit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PlantAHabit/PlantAHabit-Bridging-Header.h";
 			};
 			name = Release;
 		};

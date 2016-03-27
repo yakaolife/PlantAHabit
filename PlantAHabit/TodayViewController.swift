@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+
 class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
@@ -63,7 +64,9 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
         var cell = tableView.dequeueReusableCellWithIdentifier("HabitCell", forIndexPath: indexPath) as! HabitTableViewCell
-            
+        //SWTableViewCell add a selection style, remove it for now
+        cell.selectionStyle = .None
+        cell.rightUtilityButtons = self.addRightUtilityButtonsToCell() as [AnyObject]
         let coreData = coreHabits[indexPath.row] //Core data
         
         let habit = PAHHabit(coreDataObj: coreData)
@@ -73,6 +76,33 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         return cell
     }
+    
+    //Because we added SWTableViewCell, we have to trigger the segue manuall
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("EditHabitSegue", sender: tableView.cellForRowAtIndexPath(indexPath))
+    }
+    
+    func addRightUtilityButtonsToCell() -> NSMutableArray{
+        var buttons: NSMutableArray = NSMutableArray()
+        buttons.sw_addUtilityButtonWithColor(UIColor.greenColor(), title: "Done")
+        buttons.sw_addUtilityButtonWithColor(UIColor.redColor(), title: "Skip")
+        
+        return buttons
+    }
+    
+//    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+//        
+//        //Done
+//        let done = UITableViewRowAction(style: .Normal, title: "Done") { (<#UITableViewRowAction#>, <#NSIndexPath#>) in
+//            <#code#>
+//        }
+//        
+//        //Skip
+//        
+//        //<#T##(UITableViewRowAction, NSIndexPath) -> Void#>
+//    }
+//    
+//    func habitDone(rowAction)
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
