@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 
-class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SWTableViewCellDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var naviBar: UINavigationBar!
@@ -66,6 +66,7 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         var cell = tableView.dequeueReusableCellWithIdentifier("HabitCell", forIndexPath: indexPath) as! HabitTableViewCell
         //SWTableViewCell add a selection style, remove it for now
         cell.selectionStyle = .None
+        cell.delegate = self
         cell.rightUtilityButtons = self.addRightUtilityButtonsToCell() as [AnyObject]
         let coreData = coreHabits[indexPath.row] //Core data
         
@@ -90,19 +91,42 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return buttons
     }
     
-//    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-//        
-//        //Done
-//        let done = UITableViewRowAction(style: .Normal, title: "Done") { (<#UITableViewRowAction#>, <#NSIndexPath#>) in
-//            <#code#>
-//        }
-//        
-//        //Skip
-//        
-//        //<#T##(UITableViewRowAction, NSIndexPath) -> Void#>
-//    }
+    //Handling the utility button
+    func swipeableTableViewCell(cell: SWTableViewCell!, didTriggerRightUtilityButtonWithIndex index: Int) {
+        
+        print("Click swipebutton")
+        
+        //TODO: Keep track of which cell is already set Done or Skip! So we can disable the swipe menu, etc
+        
+        if index == 0 {
+            print("Done")
+        }else {
+            print("Skip")
+        }
+        
+        //For both in UI: gray out the text, set not selectable
+        //Cannot use the parameter cell b/c it is in SWTableViewCell :( 
+        //Roundabout way to get to HabitTableViewCell
+        var cellIndexPath = self.tableView.indexPathForCell(cell)
+        var habitCell = self.tableView.cellForRowAtIndexPath(cellIndexPath!) as! HabitTableViewCell
+        
+        habitCell.habitTitle.textColor = UIColor.lightGrayColor()
+        cell.hideUtilityButtonsAnimated(true)
+        
+        
+    }
+    
+    // prevent multiple cells from showing utilty buttons simultaneously
+    func swipeableTableViewCellShouldHideUtilityButtonsOnSwipe(cell: SWTableViewCell!) -> Bool {
+        return true
+    }
+    
+//    // utility button open/close event
+//    - (void)swipeableTableViewCell:(SWTableViewCell *)cell scrollingToState:(SWCellState)state;
+//
 //    
-//    func habitDone(rowAction)
+//    // prevent cell(s) from displaying left/right utility buttons
+//    - (BOOL)swipeableTableViewCell:(SWTableViewCell *)cell canSwipeToState:(SWCellState)state;
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
