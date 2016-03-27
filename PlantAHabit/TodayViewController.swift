@@ -74,6 +74,30 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        
+////        let coreData = coreHabits[indexPath.row]
+////        let habit = PAHHabit(coreDataObj: coreData)
+////        
+////        
+//        
+//        
+//    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "EditHabitSegue"{
+            if let destination = segue.destinationViewController as? HabitViewController{
+                let index = tableView.indexPathForSelectedRow?.row
+                let coreData = coreHabits[index!]
+                let habit = PAHHabit(coreDataObj: coreData)
+                
+                destination.habit = habit
+            }
+        }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

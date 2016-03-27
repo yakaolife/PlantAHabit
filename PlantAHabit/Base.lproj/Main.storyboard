@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SBn-da-fdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1359" y="-257"/>
+            <point key="canvasLocation" x="1471" y="-257"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="I9O-ex-gl4">
@@ -144,6 +144,7 @@
                                         <connections>
                                             <outlet property="habitTitle" destination="xVb-cc-UXa" id="qf4-d8-JAQ"/>
                                             <outlet property="plantImage" destination="ZG1-NT-Yyk" id="4op-DY-GHh"/>
+                                            <segue destination="ufa-tM-uiJ" kind="presentation" identifier="EditHabitSegue" id="1Pe-wm-1Be"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
