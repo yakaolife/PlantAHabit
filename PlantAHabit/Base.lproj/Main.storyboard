@@ -1,25 +1,198 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sLT-7D-esr">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Item 2-->
+        <scene sceneID="kch-Ig-8hv">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AOi-I0-PVY" customClass="SettingViewController" customModule="PlantAHabit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="s8a-9y-nqQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="fNO-oS-jAD"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="Ff8-ND-ZnR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="WMl-rP-uEx"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tEQ-Yb-ETI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-118" y="823"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Cui-LI-Zab">
+            <objects>
+                <viewController id="Bhg-9r-BdZ" customClass="BaseViewController" customModule="PlantAHabit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2oL-0n-Dd1"/>
+                        <viewControllerLayoutGuide type="bottom" id="nhw-gE-CI4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="219-3G-Fo6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="PMs-a1-O6x"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SWM-Ol-Bsg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="616" y="410"/>
+        </scene>
+        <!--Habit View Controller-->
+        <scene sceneID="teL-vt-gOd">
+            <objects>
+                <viewController storyboardIdentifier="habitViewController" id="ufa-tM-uiJ" customClass="HabitViewController" customModule="PlantAHabit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SR6-xe-g9x"/>
+                        <viewControllerLayoutGuide type="bottom" id="FMY-re-eaJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Lh-B4-1Eh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xy1-dY-xEa">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="hOQ-Oa-bPW"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Habit Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l9j-bT-Q6A">
+                                <rect key="frame" x="20" y="88" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTl-9u-SYU">
+                                <rect key="frame" x="20" y="150" width="560" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.073311755916591892" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteHabit:" destination="ufa-tM-uiJ" eventType="touchUpInside" id="c8N-ZY-yr7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l9j-bT-Q6A" firstAttribute="centerX" secondItem="Xy1-dY-xEa" secondAttribute="centerX" id="7vD-3O-WV5"/>
+                            <constraint firstAttribute="trailing" secondItem="Xy1-dY-xEa" secondAttribute="trailing" id="ciN-fz-2HA"/>
+                            <constraint firstItem="l9j-bT-Q6A" firstAttribute="top" secondItem="Xy1-dY-xEa" secondAttribute="bottom" constant="44" id="dhc-GG-PC3"/>
+                            <constraint firstItem="l9j-bT-Q6A" firstAttribute="leading" secondItem="2Lh-B4-1Eh" secondAttribute="leadingMargin" id="l7Q-dX-7TF"/>
+                            <constraint firstItem="Xy1-dY-xEa" firstAttribute="top" secondItem="2Lh-B4-1Eh" secondAttribute="top" id="nev-l5-k4q"/>
+                            <constraint firstItem="Xy1-dY-xEa" firstAttribute="leading" secondItem="2Lh-B4-1Eh" secondAttribute="leading" id="rvg-Bl-y01"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="deleteButton" destination="KTl-9u-SYU" id="fJ4-hi-mbo"/>
+                        <outlet property="habitTitleTextField" destination="l9j-bT-Q6A" id="Kbs-GM-VAR"/>
+                        <outlet property="naviBar" destination="Xy1-dY-xEa" id="0cb-36-IXv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SBn-da-fdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1359" y="-257"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="I9O-ex-gl4">
+            <objects>
+                <viewController id="cdi-3z-CIC" customClass="TodayViewController" customModule="PlantAHabit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DlQ-Eq-1ge"/>
+                        <viewControllerLayoutGuide type="bottom" id="JJf-i1-lUt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3JX-MR-CqH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rzh-ol-yRk">
+                                <rect key="frame" x="0.0" y="44" width="600" height="507"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HabitCell" rowHeight="70" id="MlC-14-hWD" customClass="HabitTableViewCell" customModule="PlantAHabit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MlC-14-hWD" id="COL-C0-cnp">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZG1-NT-Yyk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="69" height="69"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habit Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVb-cc-UXa">
+                                                    <rect key="frame" x="77" y="8" width="79" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xVb-cc-UXa" firstAttribute="leading" secondItem="COL-C0-cnp" secondAttribute="leading" constant="77" id="6es-Pn-jnL"/>
+                                                <constraint firstItem="xVb-cc-UXa" firstAttribute="leading" secondItem="ZG1-NT-Yyk" secondAttribute="trailing" constant="8" symbolic="YES" id="8Hb-VL-1yM"/>
+                                                <constraint firstItem="ZG1-NT-Yyk" firstAttribute="leading" secondItem="COL-C0-cnp" secondAttribute="leading" id="JmM-ym-0Nb"/>
+                                                <constraint firstItem="xVb-cc-UXa" firstAttribute="top" secondItem="COL-C0-cnp" secondAttribute="topMargin" id="Xgc-dN-9Ut"/>
+                                                <constraint firstItem="xVb-cc-UXa" firstAttribute="leading" secondItem="ZG1-NT-Yyk" secondAttribute="trailing" constant="8" id="gI7-gC-5u2"/>
+                                                <constraint firstItem="ZG1-NT-Yyk" firstAttribute="top" secondItem="COL-C0-cnp" secondAttribute="top" id="jql-Nt-rB4"/>
+                                                <constraint firstItem="ZG1-NT-Yyk" firstAttribute="centerY" secondItem="COL-C0-cnp" secondAttribute="centerY" id="zmw-RY-xbc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="habitTitle" destination="xVb-cc-UXa" id="qf4-d8-JAQ"/>
+                                            <outlet property="plantImage" destination="ZG1-NT-Yyk" id="4op-DY-GHh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dY0-HH-uf4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="Mz2-jg-AmM"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="dY0-HH-uf4" firstAttribute="trailing" secondItem="Rzh-ol-yRk" secondAttribute="trailing" id="2tU-fd-jjE"/>
+                            <constraint firstItem="dY0-HH-uf4" firstAttribute="leading" secondItem="3JX-MR-CqH" secondAttribute="leading" id="4eu-s0-kFB"/>
+                            <constraint firstItem="dY0-HH-uf4" firstAttribute="bottom" secondItem="Rzh-ol-yRk" secondAttribute="top" id="74o-25-Hpg"/>
+                            <constraint firstItem="dY0-HH-uf4" firstAttribute="top" secondItem="3JX-MR-CqH" secondAttribute="top" id="954-gd-PpN"/>
+                            <constraint firstAttribute="trailing" secondItem="dY0-HH-uf4" secondAttribute="trailing" id="FJt-jd-474"/>
+                            <constraint firstItem="Rzh-ol-yRk" firstAttribute="bottom" secondItem="JJf-i1-lUt" secondAttribute="top" id="PJg-a1-fQd"/>
+                            <constraint firstItem="dY0-HH-uf4" firstAttribute="leading" secondItem="Rzh-ol-yRk" secondAttribute="leading" id="hnM-q9-Fri"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="PPZ-9z-303"/>
+                    <connections>
+                        <outlet property="naviBar" destination="dY0-HH-uf4" id="WTg-F7-QDj"/>
+                        <outlet property="tableView" destination="Rzh-ol-yRk" id="tvp-ib-CUb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S6p-y3-kPt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="702" y="-257"/>
+        </scene>
+        <!--My Tab Bar Controller-->
+        <scene sceneID="o2o-BF-Mp9">
+            <objects>
+                <tabBarController id="sLT-7D-esr" customClass="MyTabBarController" customModule="PlantAHabit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Asu-R2-OOb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="cdi-3z-CIC" kind="relationship" relationship="viewControllers" id="iSk-gF-Koj"/>
+                        <segue destination="AOi-I0-PVY" kind="relationship" relationship="viewControllers" id="9ZX-vO-MTj"/>
+                        <segue destination="Bhg-9r-BdZ" kind="relationship" relationship="viewControllers" id="OJP-63-hsA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VHR-Lh-kgy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-118" y="74"/>
         </scene>
     </scenes>
 </document>
