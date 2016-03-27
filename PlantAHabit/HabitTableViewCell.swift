@@ -18,14 +18,6 @@ class HabitTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
-//        if let h = habit{
-//            print("has habit")
-//            habitTitle.text = h.title
-//        }else{
-//            print("no habit")
-//        }
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

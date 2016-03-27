@@ -24,13 +24,15 @@ class PAHHabit: NSObject {
     
     
     //Habit Stats
-    var totalCount: Int = 0
-    var completeCount: Int = 0 {
+    
+    //TODO: These two might have dependency! beware of totalCount = 0 but completeCount is set first...
+    var totalCount: Int = 0 {
         didSet{
             rate = Double(completeCount / totalCount)
             //TODO: set plant growth here too?
         }
     }
+    var completeCount: Int = 0
     var rate: Double = 0
     
     //TODO: Add Alarm class

@@ -74,16 +74,6 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        
-////        let coreData = coreHabits[indexPath.row]
-////        let habit = PAHHabit(coreDataObj: coreData)
-////        
-////        
-//        
-//        
-//    }
-    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         

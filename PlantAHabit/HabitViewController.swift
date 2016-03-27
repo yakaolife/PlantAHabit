@@ -106,6 +106,10 @@ class HabitViewController: UIViewController {
             //Save the habit!
             let coreHabit = dataStore.getMangedObjectToSet("Habit")
             coreHabit.setValue(habitTitleTextField.text!, forKey: "title")
+//            coreHabit.setValue("", forKey: "note")
+//            coreHabit.setValue("", forKey: "plantType")
+//            coreHabit.setValue(1, forKey: "completeCount")
+//            coreHabit.setValue(1, forKey: "totalCount")
         
         }
         
