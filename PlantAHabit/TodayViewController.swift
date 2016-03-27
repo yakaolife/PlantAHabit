@@ -51,7 +51,7 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     //Load from Core Data
     func loadCoreData(){
-        coreHabits = dataStore.fetchData("Habit")
+        coreHabits = dataStore.fetchData("Habit", predicate: nil)
     }
     
     

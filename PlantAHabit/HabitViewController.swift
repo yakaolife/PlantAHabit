@@ -16,10 +16,12 @@ class HabitViewController: UIViewController {
     
     //TODO: How to initialize?
     var habit: PAHHabit?
+    var dataStore = PAHDataStore.sharedInstance
     
     @IBOutlet weak var habitTitleTextField: UITextField!
     @IBOutlet weak var naviBar: UINavigationBar!
     @IBOutlet weak var deleteButton: UIButton!
+
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -42,6 +44,9 @@ class HabitViewController: UIViewController {
             print("Habit title is \(h.title)")
         }else{
             //New Habit view!
+            
+            //Hide the delete button!
+            deleteButton.hidden = true
             
             habit = PAHHabit(title: "New Habit Title", note: "Note", schedule: PAHSchedule(type:             PAHSchedule.Schedule.Daily, days: ["M"]))
             
@@ -72,32 +77,48 @@ class HabitViewController: UIViewController {
         //Save the habit!
         habit?.title = habitTitleTextField.text!
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
+        //Check if there's a duplicate!!
+        let predicate = NSPredicate(format: "title == %@", habitTitleTextField.text!)
+        let foundHabit = dataStore.fetchData("Habit", predicate: predicate)
         
-        let entity = NSEntityDescription.entityForName("Habit", inManagedObjectContext: managedContext)
-        
-        let coreHabit = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
-        
-        coreHabit.setValue(habit?.title, forKey: "title")
-        
-        do{
-            try managedContext.save()
+        if foundHabit.count != 0{
+            print("Duplicate Habit title!, edit")
+            //TODO: add a error message in UI!
             
-        }catch let error as NSError{
-            print("Could not save \(error), \(error.userInfo)")
             
+        }else{
+            let coreHabit = dataStore.getMangedObjectToSet("Habit")
+            
+            coreHabit.setValue(habit?.title, forKey: "title")
+            
+            do{
+                try dataStore.managedContext.save()
+                
+            }catch let error as NSError{
+                print("Could not save \(error), \(error.userInfo)")
+            }
+            
+            //dismiss the viewController!
+            self.dismissViewControllerAnimated(true, completion: nil)
         }
         
-        //dismiss the viewController!
-        self.dismissViewControllerAnimated(true, completion: nil)
+
     }
 
     @IBAction func deleteHabit(sender: UIButton) {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
         
-        let entity = NSEntityDescription.entityForName("Habit", inManagedObjectContext: managedContext)
+        //Find the one we want to remove
+        let predicate = NSPredicate(format: "title == %@", habitTitleTextField.text!)
+        let coreHabits = dataStore.fetchData("Habit", predicate: predicate)
+        
+        for habit in coreHabits{
+            if let habitTitle = habit.valueForKey("title") as? String{
+                if habitTitle == habitTitleTextField.text! {
+                    //Found and delete
+                    dataStore.managedContext.deleteObject(habit)
+                }
+            }
+        }
         
     }
     override func didReceiveMemoryWarning() {

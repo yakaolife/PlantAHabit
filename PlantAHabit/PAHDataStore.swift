@@ -24,9 +24,15 @@ class PAHDataStore {
        managedContext = appDelegate.managedObjectContext
     }
     
-    func fetchData(entityName: String)->[NSManagedObject]{
+    // predicate can be nill or not
+    func fetchData(entityName: String, predicate: NSPredicate?)->[NSManagedObject]{
         
         let fetchRequest = NSFetchRequest(entityName: entityName)
+        
+        if predicate != nil{
+            fetchRequest.predicate = predicate
+        }
+    
         var data = [NSManagedObject]()
         
         do{
@@ -41,6 +47,15 @@ class PAHDataStore {
         return data
     }
     
+    //Assuming habit title is unique
+    func getMangedObjectToSet(entityName: String)-> NSManagedObject{
+        
+        let entity = NSEntityDescription.entityForName(entityName, inManagedObjectContext: managedContext)
+        
+        let managedObject = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        
+        return managedObject
+    }
     
     
     
