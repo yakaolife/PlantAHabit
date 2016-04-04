@@ -23,6 +23,7 @@ class PAHHabit: NSObject {
     // Use plantType for now
     var plant: PAHPlant?
     var plantType: String = "bush"
+    var uid: String?
     
     
     //Habit Stats
@@ -43,9 +44,11 @@ class PAHHabit: NSObject {
     //Convenience init coming from Core Data
     init(coreDataObj: NSManagedObject){
         self.title = (coreDataObj.valueForKey("title") as? String)!
+        self.note = (coreDataObj.valueForKey("note") as? String)!
         self.completeCount = (coreDataObj.valueForKey("completeCount") as? Int)!
         self.totalCount = (coreDataObj.valueForKey("totalCount") as? Int)!
         self.plantType = (coreDataObj.valueForKey("plantType") as? String)!
+        self.uid = (coreDataObj.valueForKey("uid") as? String)!
 
     }
     
@@ -53,7 +56,9 @@ class PAHHabit: NSObject {
         self.title = title
         self.note = note
         self.schedule = schedule
-
+        self.uid = PAHDataStore.sharedInstance.generateHabitUid(self.title)
+        
+        print("id is \(self.uid)")
         
 //        if(plant != nil){
 //            self.plant = PAHPlant()

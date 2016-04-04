@@ -42,23 +42,22 @@ class HabitViewController: UIViewController {
             //Edit/Detail view! Populate all the fields
             isEdit = true
             habitTitleTextField.text = h.title
+            noteTextField.text = h.note
             
             self.title = "\(h.title)"
-            //print("Habit title is \(h.title)")
+            
+            print("note is \(h.note)")
+
         }else{
             //New Habit view!
             
             //Hide the delete button!
             deleteButton.hidden = true
-            
-            habit = PAHHabit(title: "New Habit Title", note: "Note", schedule: PAHSchedule(type:             PAHSchedule.Schedule.Daily, days: ["M"]))
-            
-            habitTitleTextField.placeholder = habit?.title
+            habitTitleTextField.placeholder = "New Habit"
             
             self.title = "New Habit"
-            //print("New Habit!")
+
         }
-        
         
         //Customizing the navigation bar
         
@@ -79,53 +78,24 @@ class HabitViewController: UIViewController {
     //The reason we do this here is because we are only going to do this here...
     func saveHabit(){
         
-        //TODO: Data validation! (empty title, etc)
-        
-        //Check if the new title (New Habit or Edit Habit) is duplicate with other in the core data
-        let predicate = NSPredicate(format: "title == %@", habitTitleTextField.text!)
-        let duplicate = dataStore.fetchData("Habit", predicate: predicate)
-        
-        if duplicate.count != 0{
-            //The title is not good
-            print("Duplicate Habit title with existing other habit!, edit")
-            //TODO: add a error message in UI!
-            habitTitleTextField.text = habitTitleTextField.text! + "-Title already exist!"
-            
-            return
-        }
-        
-        if isEdit{
-            //Find the original in Core Data to edit
-            let predicate = NSPredicate(format: "title == %@", (habit?.title)!)
-            let foundHabit = dataStore.fetchData("Habit", predicate: predicate)
-            
-            if foundHabit.count == 1{
-                //Found the one we want to edit!
-                //Can't change the rate, plant type and counts though
-                foundHabit[0].setValue(habitTitleTextField.text, forKey: "title")
-                foundHabit[0].setValue(noteTextField.text, forKey: "note")
-
-            }
-            
+        if !isEdit{
+            habit = PAHHabit(title: habitTitleTextField.text!, note: noteTextField.text!, schedule: PAHSchedule(type:PAHSchedule.Schedule.Daily, days: ["M"]))
         }else{
-            //Save the new habit!
-            let coreHabit = dataStore.getMangedObjectToSet("Habit")
-            coreHabit.setValue(habitTitleTextField.text!, forKey: "title")
-            coreHabit.setValue(noteTextField.text!, forKey: "note")
-            coreHabit.setValue("bush", forKey: "plantType")
-            coreHabit.setValue(0, forKey: "completeCount")
-            coreHabit.setValue(0, forKey: "totalCount")
-        
+            //Modify the habit
+            habit?.title = habitTitleTextField.text!
+            habit?.note = noteTextField.text!
         }
         
         do{
-            try dataStore.managedContext.save()
+            try dataStore.saveHabit(habit!)
             
-        }catch let error as NSError{
-            print("Could not save \(error), \(error.userInfo)")
+        }catch PAHDataStore.DataError.SavingError{
+            print("Could not save data!")
+            
+        }catch{
+            print("Could not save data! Other error")
         }
         
-        //dismiss the viewController!
         self.dismissViewControllerAnimated(true, completion: nil)
 
     }

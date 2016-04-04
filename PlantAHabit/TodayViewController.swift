@@ -126,8 +126,12 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         habitCell.habitTitle.textColor = UIColor.lightGrayColor()
         cell.hideUtilityButtonsAnimated(true)
         
+        //Update the habit, save data
+        
+        
         
     }
+    
     
     // prevent multiple cells from showing utilty buttons simultaneously
     func swipeableTableViewCellShouldHideUtilityButtonsOnSwipe(cell: SWTableViewCell!) -> Bool {
