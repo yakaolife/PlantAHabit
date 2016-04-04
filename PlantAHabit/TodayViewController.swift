@@ -11,12 +11,18 @@ import CoreData
 
 
 class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SWTableViewCellDelegate {
+    
+    //For keeping track of the user status of each habit cell
+    enum HabitStatus{
+        case Done, Skip
+    }
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var naviBar: UINavigationBar!
     
-    //var habits = [PAHHabit]()
-    var coreHabits = [NSManagedObject]()
+    var habitArray = [PAHHabit]()
+    var habitStatusArray = [HabitStatus]()
+    
     let dataStore = PAHDataStore.sharedInstance
     
     
@@ -51,14 +57,22 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     //Load from Core Data
+    
     func loadCoreData(){
-        coreHabits = dataStore.fetchData("Habit", predicate: nil)
+        let coreHabits = dataStore.fetchData("Habit", predicate: nil)
+        //Clean up habitArray
+        habitArray.removeAll()
+        
+        for data in coreHabits{
+            let habit  = PAHHabit(coreDataObj: data)
+            habitArray.append(habit)
+        }
+        
     }
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        
-        return coreHabits.count
+        return habitArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
@@ -68,9 +82,7 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.selectionStyle = .None
         cell.delegate = self
         cell.rightUtilityButtons = self.addRightUtilityButtonsToCell() as [AnyObject]
-        let coreData = coreHabits[indexPath.row] //Core data
-        
-        let habit = PAHHabit(coreDataObj: coreData)
+        let habit = habitArray[indexPath.row]
         
         cell.habit = habit
         cell.habitTitle.text = habit.title
@@ -107,7 +119,7 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //For both in UI: gray out the text, set not selectable
         //Cannot use the parameter cell b/c it is in SWTableViewCell :( 
         //Roundabout way to get to HabitTableViewCell
-        var cellIndexPath = self.tableView.indexPathForCell(cell)
+        let cellIndexPath = self.tableView.indexPathForCell(cell)
         var habitCell = self.tableView.cellForRowAtIndexPath(cellIndexPath!) as! HabitTableViewCell
         
         habitCell.habitTitle.textColor = UIColor.lightGrayColor()
@@ -134,8 +146,7 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if segue.identifier == "EditHabitSegue"{
             if let destination = segue.destinationViewController as? HabitViewController{
                 let index = tableView.indexPathForSelectedRow?.row
-                let coreData = coreHabits[index!]
-                let habit = PAHHabit(coreDataObj: coreData)
+                let habit = habitArray[index!]
                 
                 destination.habit = habit
             }
