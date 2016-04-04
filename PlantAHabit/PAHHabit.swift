@@ -20,10 +20,14 @@ class PAHHabit: NSObject {
     var schedule: PAHSchedule = PAHSchedule(type: PAHSchedule.Schedule.Daily, days: ["M", "T", "W", "Th", "F", "Sa", "S"])
     
     //TODO: how to init this
+    // Use plantType for now
     var plant: PAHPlant?
+    var plantType: String = "bush"
     
     
     //Habit Stats
+    var completeCount: Int = 0
+    var rate: Double = 0
     
     //TODO: These two might have dependency! beware of totalCount = 0 but completeCount is set first...
     var totalCount: Int = 0 {
@@ -32,8 +36,6 @@ class PAHHabit: NSObject {
             //TODO: set plant growth here too?
         }
     }
-    var completeCount: Int = 0
-    var rate: Double = 0
     
     //TODO: Add Alarm class
     //TODO: Add Tag?
@@ -41,6 +43,9 @@ class PAHHabit: NSObject {
     //Convenience init coming from Core Data
     init(coreDataObj: NSManagedObject){
         self.title = (coreDataObj.valueForKey("title") as? String)!
+        self.completeCount = (coreDataObj.valueForKey("completeCount") as? Int)!
+        self.totalCount = (coreDataObj.valueForKey("totalCount") as? Int)!
+        self.plantType = (coreDataObj.valueForKey("plantType") as? String)!
 
     }
     

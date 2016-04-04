@@ -22,6 +22,7 @@ class HabitViewController: UIViewController {
     @IBOutlet weak var habitTitleTextField: UITextField!
     @IBOutlet weak var naviBar: UINavigationBar!
     @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var noteTextField: UITextField!
 
     
     required init?(coder aDecoder: NSCoder) {
@@ -75,10 +76,11 @@ class HabitViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-
+    //The reason we do this here is because we are only going to do this here...
     func saveHabit(){
         
         //TODO: Data validation! (empty title, etc)
+        
         //Check if the new title (New Habit or Edit Habit) is duplicate with other in the core data
         let predicate = NSPredicate(format: "title == %@", habitTitleTextField.text!)
         let duplicate = dataStore.fetchData("Habit", predicate: predicate)
@@ -99,17 +101,20 @@ class HabitViewController: UIViewController {
             
             if foundHabit.count == 1{
                 //Found the one we want to edit!
+                //Can't change the rate, plant type and counts though
                 foundHabit[0].setValue(habitTitleTextField.text, forKey: "title")
+                foundHabit[0].setValue(noteTextField.text, forKey: "note")
+
             }
             
         }else{
-            //Save the habit!
+            //Save the new habit!
             let coreHabit = dataStore.getMangedObjectToSet("Habit")
             coreHabit.setValue(habitTitleTextField.text!, forKey: "title")
-//            coreHabit.setValue("", forKey: "note")
-//            coreHabit.setValue("", forKey: "plantType")
-//            coreHabit.setValue(1, forKey: "completeCount")
-//            coreHabit.setValue(1, forKey: "totalCount")
+            coreHabit.setValue(noteTextField.text!, forKey: "note")
+            coreHabit.setValue("bush", forKey: "plantType")
+            coreHabit.setValue(0, forKey: "completeCount")
+            coreHabit.setValue(0, forKey: "totalCount")
         
         }
         

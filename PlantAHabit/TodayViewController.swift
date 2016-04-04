@@ -86,6 +86,7 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         cell.habit = habit
         cell.habitTitle.text = habit.title
+        cell.rateTitle.text = "Total: \(habit.totalCount), completion: \(habit.completeCount), rate: \(habit.rate)"
         
         return cell
     }

@@ -13,6 +13,7 @@ class HabitTableViewCell: SWTableViewCell {
 
     @IBOutlet weak var plantImage: UIImageView!
     @IBOutlet weak var habitTitle: UILabel!
+    @IBOutlet weak var rateTitle: UILabel!
     
     //Cannot use for display, just for sending the data to edit later
     var habit: PAHHabit?

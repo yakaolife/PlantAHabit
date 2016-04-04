@@ -67,8 +67,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTl-9u-SYU">
-                                <rect key="frame" x="20" y="150" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Note" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pU3-3Q-JFd">
+                                <rect key="frame" x="20" y="137" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTl-9u-SYU">
+                                <rect key="frame" x="20" y="212" width="560" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.073311755916591892" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Delete">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -81,17 +86,24 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="l9j-bT-Q6A" firstAttribute="centerX" secondItem="Xy1-dY-xEa" secondAttribute="centerX" id="7vD-3O-WV5"/>
+                            <constraint firstItem="KTl-9u-SYU" firstAttribute="top" secondItem="pU3-3Q-JFd" secondAttribute="bottom" constant="45" id="DBH-iy-xMK"/>
+                            <constraint firstItem="pU3-3Q-JFd" firstAttribute="trailing" secondItem="l9j-bT-Q6A" secondAttribute="trailing" id="EDD-m9-1fz"/>
+                            <constraint firstItem="pU3-3Q-JFd" firstAttribute="trailing" secondItem="KTl-9u-SYU" secondAttribute="trailing" id="Ikd-Pm-1Es"/>
                             <constraint firstAttribute="trailing" secondItem="Xy1-dY-xEa" secondAttribute="trailing" id="ciN-fz-2HA"/>
                             <constraint firstItem="l9j-bT-Q6A" firstAttribute="top" secondItem="Xy1-dY-xEa" secondAttribute="bottom" constant="44" id="dhc-GG-PC3"/>
+                            <constraint firstItem="pU3-3Q-JFd" firstAttribute="leading" secondItem="KTl-9u-SYU" secondAttribute="leading" id="gkg-gq-087"/>
                             <constraint firstItem="l9j-bT-Q6A" firstAttribute="leading" secondItem="2Lh-B4-1Eh" secondAttribute="leadingMargin" id="l7Q-dX-7TF"/>
+                            <constraint firstItem="pU3-3Q-JFd" firstAttribute="top" secondItem="l9j-bT-Q6A" secondAttribute="bottom" constant="19" id="lqu-Kz-bZ2"/>
                             <constraint firstItem="Xy1-dY-xEa" firstAttribute="top" secondItem="2Lh-B4-1Eh" secondAttribute="top" id="nev-l5-k4q"/>
                             <constraint firstItem="Xy1-dY-xEa" firstAttribute="leading" secondItem="2Lh-B4-1Eh" secondAttribute="leading" id="rvg-Bl-y01"/>
+                            <constraint firstItem="pU3-3Q-JFd" firstAttribute="leading" secondItem="l9j-bT-Q6A" secondAttribute="leading" id="xB2-dB-nQk"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="deleteButton" destination="KTl-9u-SYU" id="fJ4-hi-mbo"/>
                         <outlet property="habitTitleTextField" destination="l9j-bT-Q6A" id="Kbs-GM-VAR"/>
                         <outlet property="naviBar" destination="Xy1-dY-xEa" id="0cb-36-IXv"/>
+                        <outlet property="noteTextField" destination="pU3-3Q-JFd" id="RLl-Jr-dyF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SBn-da-fdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -118,7 +130,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MlC-14-hWD" id="COL-C0-cnp">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZG1-NT-Yyk">
@@ -130,6 +142,12 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completion Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TP7-1u-Doe">
+                                                    <rect key="frame" x="77" y="37" width="510" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="xVb-cc-UXa" firstAttribute="leading" secondItem="COL-C0-cnp" secondAttribute="leading" constant="77" id="6es-Pn-jnL"/>
@@ -138,12 +156,16 @@
                                                 <constraint firstItem="xVb-cc-UXa" firstAttribute="top" secondItem="COL-C0-cnp" secondAttribute="topMargin" id="Xgc-dN-9Ut"/>
                                                 <constraint firstItem="xVb-cc-UXa" firstAttribute="leading" secondItem="ZG1-NT-Yyk" secondAttribute="trailing" constant="8" id="gI7-gC-5u2"/>
                                                 <constraint firstItem="ZG1-NT-Yyk" firstAttribute="top" secondItem="COL-C0-cnp" secondAttribute="top" id="jql-Nt-rB4"/>
+                                                <constraint firstItem="TP7-1u-Doe" firstAttribute="leading" secondItem="xVb-cc-UXa" secondAttribute="leading" id="qd5-oD-zxV"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="TP7-1u-Doe" secondAttribute="trailing" constant="5" id="tZq-Tf-gGA"/>
+                                                <constraint firstItem="TP7-1u-Doe" firstAttribute="top" secondItem="xVb-cc-UXa" secondAttribute="bottom" constant="8" symbolic="YES" id="zFc-bd-dCr"/>
                                                 <constraint firstItem="ZG1-NT-Yyk" firstAttribute="centerY" secondItem="COL-C0-cnp" secondAttribute="centerY" id="zmw-RY-xbc"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="habitTitle" destination="xVb-cc-UXa" id="qf4-d8-JAQ"/>
                                             <outlet property="plantImage" destination="ZG1-NT-Yyk" id="4op-DY-GHh"/>
+                                            <outlet property="rateTitle" destination="TP7-1u-Doe" id="lOg-4a-rnn"/>
                                             <segue destination="ufa-tM-uiJ" kind="presentation" identifier="EditHabitSegue" id="1Pe-wm-1Be"/>
                                         </connections>
                                     </tableViewCell>
