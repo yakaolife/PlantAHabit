@@ -28,15 +28,8 @@ class PAHHabit: NSObject {
     
     //Habit Stats
     var completeCount: Int = 0
-    var rate: Double = 0
-    
-    //TODO: These two might have dependency! beware of totalCount = 0 but completeCount is set first...
-    var totalCount: Int = 0 {
-        didSet{
-            rate = Double(completeCount / totalCount)
-            //TODO: set plant growth here too?
-        }
-    }
+    var totalCount: Int = 0
+    //Rate is calculated: see getRate function
     
     //TODO: Add Alarm class
     //TODO: Add Tag?
@@ -67,6 +60,28 @@ class PAHHabit: NSObject {
 //        }
         
     }
+    
+    func getRate()->Double{
+        print("getRate")
+        if self.completeCount == 0{
+            return 0.0
+        }else{
+        
+            return roundRate(Double(self.completeCount) / Double(self.totalCount))
+        }
+    }
+    
+    //Just helper function stuff
+    
+    //From http://stackoverflow.com/a/26351144
+    func roundRate(num: Double)->Double{
+        let numberOfPlaces = 2.0
+        let multiplier = pow(10.0, numberOfPlaces)
+        
+        return round(num * multiplier) / multiplier
+    }
+    
+
     
 
     

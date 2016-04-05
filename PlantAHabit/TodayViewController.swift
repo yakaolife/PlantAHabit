@@ -46,14 +46,13 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         loadCoreData()
         
-        tableView.reloadData()
+
     }
     
     //For updating after we just Add/Edit Habit
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         loadCoreData()
-        tableView.reloadData()
     }
     
     //Load from Core Data
@@ -68,6 +67,7 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
             habitArray.append(habit)
         }
         
+        tableView.reloadData()
     }
     
     
@@ -86,7 +86,7 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         cell.habit = habit
         cell.habitTitle.text = habit.title
-        cell.rateTitle.text = "Total: \(habit.totalCount), completion: \(habit.completeCount), rate: \(habit.rate)"
+        cell.rateTitle.text = "Total: \(habit.totalCount), completion: \(habit.completeCount), rate: \(habit.getRate())"
         
         return cell
     }
@@ -111,14 +111,8 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         //TODO: Keep track of which cell is already set Done or Skip! So we can disable the swipe menu, etc
         
-        if index == 0 {
-            print("Done")
-        }else {
-            print("Skip")
-        }
-        
         //For both in UI: gray out the text, set not selectable
-        //Cannot use the parameter cell b/c it is in SWTableViewCell :( 
+        //Cannot use the parameter cell b/c it is in SWTableViewCell :(
         //Roundabout way to get to HabitTableViewCell
         let cellIndexPath = self.tableView.indexPathForCell(cell)
         var habitCell = self.tableView.cellForRowAtIndexPath(cellIndexPath!) as! HabitTableViewCell
@@ -126,12 +120,30 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         habitCell.habitTitle.textColor = UIColor.lightGrayColor()
         cell.hideUtilityButtonsAnimated(true)
         
-        //Update the habit, save data
+        //Get the habit
+        var habit = self.habitArray[cellIndexPath!.row]
         
+        if index == 0 {
+            //print("Done")
+            habit.completeCount += 1
+            habit.totalCount += 1
+        }else {
+            //print("Skip")
+            habit.totalCount += 1
+        }
         
+        //Save data
+        do{
+            try dataStore.saveHabit(habit)
+        }catch{
+            print("Could not save data!")
+        }
         
-    }
+        //Reload? 
+        loadCoreData()
     
+    }
+
     
     // prevent multiple cells from showing utilty buttons simultaneously
     func swipeableTableViewCellShouldHideUtilityButtonsOnSwipe(cell: SWTableViewCell!) -> Bool {
