@@ -26,7 +26,7 @@ class MyTabBarController: UITabBarController, UITabBarControllerDelegate {
     func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool{
         
         if let vc = viewController as? BaseViewController{
-            let habitView:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("habitViewController") as! HabitViewController
+            let habitView:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("habitDetailView") as! HabitViewController
             self.presentViewController(habitView, animated: true, completion: nil)
             return false
         }else{

@@ -12,7 +12,7 @@ import CoreData
 //This viewController is used for both adding New Habit and also Edit/Detail view
 //We'll set a variable to see if this is new (don't populate or not), or if habit is not passed in, then assuming this is new
 
-class HabitViewController: UIViewController {
+class HabitViewController: UITableViewController {
     
     //TODO: How to initialize?
     var habit: PAHHabit?
@@ -20,10 +20,19 @@ class HabitViewController: UIViewController {
     var isEdit = false
     
     @IBOutlet weak var habitTitleTextField: UITextField!
-    @IBOutlet weak var naviBar: UINavigationBar!
+    //@IBOutlet weak var naviBar: UINavigationBar!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var noteTextField: UITextField!
 
+    @IBOutlet weak var PlantInfoCell: UITableViewCell!
+    
+    @IBOutlet weak var ChoosePlantCell: UITableViewCell!
+    
+    @IBOutlet weak var scheduleDailyBtn: UIButton!
+    
+    @IBOutlet weak var scheduleWeeklyBtn: UIButton!
+    
+    @IBOutlet weak var scheduleMonthlyBtn: UIButton!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -65,19 +74,30 @@ class HabitViewController: UIViewController {
         
         let save = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: #selector(HabitViewController.saveHabit))
         
-        naviBar.topItem?.leftBarButtonItem = back
-        naviBar.topItem?.rightBarButtonItem = save
+        self.navigationItem.rightBarButtonItem = save
+        self.navigationItem.leftBarButtonItem = back
+        
+        //
+//        naviBar.topItem?.leftBarButtonItem = back
+//        naviBar.topItem?.rightBarButtonItem = save
         
         
     }
     
-    func dismiss(sender: UIBarButtonItem){
-        self.dismissViewControllerAnimated(true, completion: nil)
+    
+    @IBAction func dismiss(sender: UIButton) {
+         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+//    func dismiss(sender: UIBarButtonItem){
+//        self.dismissViewControllerAnimated(true, completion: nil)
+//    }
     
     //The reason we do this here is because we are only going to do this here...
-    func saveHabit(){
-        
+    //func saveHabit(){
+    
+    @IBAction func saveHabit(sender: UIButton) {
+
         if !isEdit{
             habit = PAHHabit(title: habitTitleTextField.text!, note: noteTextField.text!, schedule: PAHSchedule(type:PAHSchedule.Schedule.Daily, days: ["M"]))
         }else{
