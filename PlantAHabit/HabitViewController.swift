@@ -21,7 +21,7 @@ class HabitViewController: UITableViewController {
     
     @IBOutlet weak var habitTitleTextField: UITextField!
     //@IBOutlet weak var naviBar: UINavigationBar!
-    @IBOutlet weak var deleteButton: UIButton!
+    
     @IBOutlet weak var noteTextField: UITextField!
 
     @IBOutlet weak var PlantInfoCell: UITableViewCell!
@@ -33,6 +33,7 @@ class HabitViewController: UITableViewController {
     @IBOutlet weak var scheduleWeeklyBtn: UIButton!
     
     @IBOutlet weak var scheduleMonthlyBtn: UIButton!
+    @IBOutlet weak var deleteCell: UITableViewCell!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -61,7 +62,8 @@ class HabitViewController: UITableViewController {
             //New Habit view!
             
             //Hide the delete button!
-            deleteButton.hidden = true
+            //deleteButton.hidden = true
+            deleteCell.hidden = true;
             habitTitleTextField.placeholder = "New Habit"
             
             self.title = "New Habit"
@@ -76,6 +78,9 @@ class HabitViewController: UITableViewController {
         
         self.navigationItem.rightBarButtonItem = save
         self.navigationItem.leftBarButtonItem = back
+        
+        // So we won't show empty cells at the bottom
+        tableView.tableFooterView = UIView()
         
         //
 //        naviBar.topItem?.leftBarButtonItem = back
