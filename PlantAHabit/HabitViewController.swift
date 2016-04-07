@@ -171,6 +171,41 @@ class HabitViewController: UITableViewController {
     }
     
 
+    
+    // Mark: TableView functions
+    
+    //A very hacky way of making static cell disappear on runtime
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        let cell = super.tableView(tableView, cellForRowAtIndexPath: indexPath)
+        
+        if cell.tag == 1{
+            //Select Plant cell
+            if isEdit{
+                return 0
+            }else{
+                return 100
+            }
+        }else if cell.tag == 2{
+            //Plant info cell
+            if !isEdit{
+                return 0
+            }else{
+                return 100
+            }
+            
+        }else if cell.tag == 3 {
+            //Delete cell
+            if !isEdit{
+                return 0
+            }
+        }
+        
+        return 50
+    }
+    
+    
     /*
     // MARK: - Navigation
 

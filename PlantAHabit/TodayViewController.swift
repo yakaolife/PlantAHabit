@@ -44,6 +44,9 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.delegate = self
         tableView.dataSource = self
         
+        // So we won't show empty cells at the bottom
+        tableView.tableFooterView = UIView()
+        
         loadCoreData()
         
 
