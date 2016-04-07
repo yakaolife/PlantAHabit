@@ -19,6 +19,8 @@ class HabitViewController: UITableViewController {
     var dataStore = PAHDataStore.sharedInstance
     var isEdit = false
     
+    @IBOutlet weak var menuCell: UITableViewCell!
+    
     @IBOutlet weak var habitTitleTextField: UITextField!
     //@IBOutlet weak var naviBar: UINavigationBar!
     
@@ -45,6 +47,9 @@ class HabitViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        menuCell.backgroundColor = UIColor.blueColor();
+        
 
         // Do any additional setup after loading the view.
         

@@ -72,20 +72,26 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCC-sH-3Uf">
                                                     <rect key="frame" x="13" y="7" width="60" height="30"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="jps-WO-k6V"/>
                                                     </constraints>
-                                                    <state key="normal" title="Cancel"/>
+                                                    <state key="normal" title="Cancel">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="dismiss:" destination="lHy-Xn-ag8" eventType="touchUpInside" id="Xa5-5X-Cuj"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jrz-TU-Irn">
                                                     <rect key="frame" x="523" y="7" width="60" height="30"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="KN4-Ph-kXm"/>
                                                     </constraints>
-                                                    <state key="normal" title="Save"/>
+                                                    <state key="normal" title="Save">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="saveHabit:" destination="lHy-Xn-ag8" eventType="touchUpInside" id="lQ5-c4-SQa"/>
                                                     </connections>
@@ -337,9 +343,9 @@
                     <connections>
                         <outlet property="ChoosePlantCell" destination="1pU-PJ-6GP" id="ac1-ON-f0g"/>
                         <outlet property="PlantInfoCell" destination="dkd-Bo-iHP" id="ACq-mJ-Hcc"/>
-                        <outlet property="deleteButton" destination="zMA-QN-PhC" id="urz-fB-EFh"/>
                         <outlet property="deleteCell" destination="CiO-aO-qbg" id="u8G-my-eff"/>
                         <outlet property="habitTitleTextField" destination="2Az-kd-JSq" id="Ux3-Ad-Jdl"/>
+                        <outlet property="menuCell" destination="4sc-tW-HFa" id="F5C-Tq-EgL"/>
                         <outlet property="noteTextField" destination="eSb-9P-U3F" id="gMo-We-J5p"/>
                         <outlet property="scheduleDailyBtn" destination="vHW-EL-xwp" id="uGK-ZC-1e9"/>
                         <outlet property="scheduleMonthlyBtn" destination="Nnf-OY-po4" id="2lu-lI-0q3"/>
