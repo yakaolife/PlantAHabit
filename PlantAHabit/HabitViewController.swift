@@ -50,7 +50,6 @@ class HabitViewController: UITableViewController {
         
         menuCell.backgroundColor = UIColor.blueColor();
         
-
         // Do any additional setup after loading the view.
         
         if let h = habit{
@@ -169,6 +168,16 @@ class HabitViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    // Mark: Schedule and Days buttons
+    
+    @IBAction func scheduleBtnClick(sender: UIButton) {
+        sender.selected = !sender.selected
+    }
+
+
+    
     
 
     
