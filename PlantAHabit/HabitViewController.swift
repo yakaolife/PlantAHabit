@@ -172,7 +172,8 @@ class HabitViewController: UITableViewController {
     
     // Mark: Schedule and Days buttons
     
-    @IBAction func scheduleBtnClick(sender: UIButton) {
+
+    @IBAction func btnToggle(sender: UIButton) {
         sender.selected = !sender.selected
     }
 
