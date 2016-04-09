@@ -178,6 +178,30 @@ class HabitViewController: UITableViewController {
     }
 
 
+    @IBAction func scheduleBtnClick(sender: UIButton) {
+        //Daily tag = 1, weekly = 2, monthly = 3
+        sender.selected = !sender.selected
+        
+        //Toggle other ones if sender is selected
+        if sender.selected{
+            switch sender.tag {
+            case 1:
+                scheduleWeeklyBtn.selected = false
+                scheduleMonthlyBtn.selected = false
+            case 2:
+                scheduleDailyBtn.selected = false
+                scheduleMonthlyBtn.selected = false
+            case 3:
+                scheduleDailyBtn.selected = false
+                scheduleWeeklyBtn.selected = false
+                
+            default: break
+                
+            }
+        }
+        
+    }
+    
     
     
 

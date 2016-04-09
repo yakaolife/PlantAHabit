@@ -175,21 +175,21 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wWe-TG-NWD">
                                                     <rect key="frame" x="182" y="0.0" width="236" height="50"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHW-EL-xwp">
+                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHW-EL-xwp">
                                                             <rect key="frame" x="8" y="12" width="60" height="30"/>
                                                             <state key="normal" title="Daily"/>
                                                             <connections>
-                                                                <action selector="btnToggle:" destination="lHy-Xn-ag8" eventType="touchUpInside" id="FA0-5V-jwk"/>
+                                                                <action selector="scheduleBtnClick:" destination="lHy-Xn-ag8" eventType="touchUpInside" id="DlK-KW-C3g"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nnf-OY-po4">
+                                                        <button opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nnf-OY-po4">
                                                             <rect key="frame" x="168" y="12" width="60" height="30"/>
                                                             <state key="normal" title="Monthly"/>
                                                             <connections>
-                                                                <action selector="btnToggle:" destination="lHy-Xn-ag8" eventType="touchUpInside" id="bXd-vG-H3X"/>
+                                                                <action selector="scheduleBtnClick:" destination="lHy-Xn-ag8" eventType="touchUpInside" id="v0Q-7Q-2yr"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="who-dA-zHg">
+                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="who-dA-zHg">
                                                             <rect key="frame" x="88" y="12" width="60" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="60" id="8UW-JX-IZg"/>
@@ -197,7 +197,7 @@
                                                             </constraints>
                                                             <state key="normal" title="Weekly"/>
                                                             <connections>
-                                                                <action selector="btnToggle:" destination="lHy-Xn-ag8" eventType="touchUpInside" id="nEb-ws-sea"/>
+                                                                <action selector="scheduleBtnClick:" destination="lHy-Xn-ag8" eventType="touchUpInside" id="nHi-4j-rcM"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
