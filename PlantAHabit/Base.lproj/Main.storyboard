@@ -238,49 +238,49 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTf-JP-atw">
                                                     <rect key="frame" x="127" y="-1" width="346" height="44"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyn-Ek-gHv">
+                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyn-Ek-gHv">
                                                             <rect key="frame" x="8" y="7" width="30" height="30"/>
                                                             <state key="normal" title="M"/>
                                                             <connections>
                                                                 <action selector="btnToggle:" destination="lHy-Xn-ag8" eventType="touchUpInside" id="tb8-b7-64O"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8U-3s-cmy">
+                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8U-3s-cmy">
                                                             <rect key="frame" x="58" y="7" width="30" height="30"/>
                                                             <state key="normal" title="T"/>
                                                             <connections>
                                                                 <action selector="btnToggle:" destination="lHy-Xn-ag8" eventType="touchUpInside" id="ynp-x0-VvW"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKV-9B-M9P">
+                                                        <button opaque="NO" tag="3" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKV-9B-M9P">
                                                             <rect key="frame" x="108" y="7" width="30" height="30"/>
                                                             <state key="normal" title="W"/>
                                                             <connections>
                                                                 <action selector="btnToggle:" destination="lHy-Xn-ag8" eventType="touchUpInside" id="4e9-Gt-rjC"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tL-su-bby">
+                                                        <button opaque="NO" tag="4" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tL-su-bby">
                                                             <rect key="frame" x="158" y="7" width="30" height="30"/>
                                                             <state key="normal" title="Th"/>
                                                             <connections>
                                                                 <action selector="btnToggle:" destination="lHy-Xn-ag8" eventType="touchUpInside" id="4lQ-gQ-fOX"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjD-mW-KMb">
+                                                        <button opaque="NO" tag="6" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjD-mW-KMb">
                                                             <rect key="frame" x="258" y="7" width="30" height="30"/>
                                                             <state key="normal" title="Sa"/>
                                                             <connections>
                                                                 <action selector="btnToggle:" destination="lHy-Xn-ag8" eventType="touchUpInside" id="2Dy-cF-Niy"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lim-lQ-0wf">
+                                                        <button opaque="NO" tag="7" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lim-lQ-0wf">
                                                             <rect key="frame" x="308" y="7" width="30" height="30"/>
                                                             <state key="normal" title="S"/>
                                                             <connections>
                                                                 <action selector="btnToggle:" destination="lHy-Xn-ag8" eventType="touchUpInside" id="1ck-qR-Lpc"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heo-Sg-x7h">
+                                                        <button opaque="NO" tag="5" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heo-Sg-x7h">
                                                             <rect key="frame" x="208" y="7" width="30" height="30"/>
                                                             <state key="normal" title="F"/>
                                                             <connections>
@@ -372,7 +372,14 @@
                     </tableView>
                     <connections>
                         <outlet property="ChoosePlantCell" destination="1pU-PJ-6GP" id="ac1-ON-f0g"/>
+                        <outlet property="FridayBtn" destination="heo-Sg-x7h" id="gS7-7e-2LU"/>
+                        <outlet property="MondayBtn" destination="hyn-Ek-gHv" id="fCU-KJ-7st"/>
                         <outlet property="PlantInfoCell" destination="dkd-Bo-iHP" id="ACq-mJ-Hcc"/>
+                        <outlet property="SaturdayBtn" destination="cjD-mW-KMb" id="T6t-r9-kal"/>
+                        <outlet property="SundayBtn" destination="Lim-lQ-0wf" id="dzI-Gc-okM"/>
+                        <outlet property="ThursdayBtn" destination="6tL-su-bby" id="2kT-XH-rYl"/>
+                        <outlet property="TuesdayBtn" destination="T8U-3s-cmy" id="tBB-qr-oe8"/>
+                        <outlet property="WednesdayBtn" destination="qKV-9B-M9P" id="sSt-jz-5Pl"/>
                         <outlet property="deleteCell" destination="CiO-aO-qbg" id="u8G-my-eff"/>
                         <outlet property="habitTitleTextField" destination="2Az-kd-JSq" id="Ux3-Ad-Jdl"/>
                         <outlet property="menuCell" destination="4sc-tW-HFa" id="F5C-Tq-EgL"/>

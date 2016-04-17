@@ -19,6 +19,9 @@ class HabitViewController: UITableViewController {
     var dataStore = PAHDataStore.sharedInstance
     var isEdit = false
     
+    var daysBtnDict: [UIButton:PAHSchedule.Days]!
+    var dayBtnArray: [UIButton]!
+    
     @IBOutlet weak var menuCell: UITableViewCell!
     
     @IBOutlet weak var habitTitleTextField: UITextField!
@@ -30,11 +33,27 @@ class HabitViewController: UITableViewController {
     
     @IBOutlet weak var ChoosePlantCell: UITableViewCell!
     
+    //TODO: there should be a smarter way
+    
+    //Used when edit
+    var scheduleEnum =  PAHSchedule.Schedule.None
+    var daysArray : [PAHSchedule.Days] = []
+    
+    //schedule button
     @IBOutlet weak var scheduleDailyBtn: UIButton!
-    
     @IBOutlet weak var scheduleWeeklyBtn: UIButton!
-    
     @IBOutlet weak var scheduleMonthlyBtn: UIButton!
+    
+    //days button
+    @IBOutlet weak var MondayBtn: UIButton!
+    @IBOutlet weak var TuesdayBtn: UIButton!
+    @IBOutlet weak var WednesdayBtn: UIButton!
+    @IBOutlet weak var ThursdayBtn: UIButton!
+    @IBOutlet weak var FridayBtn: UIButton!
+    @IBOutlet weak var SaturdayBtn: UIButton!
+    @IBOutlet weak var SundayBtn: UIButton!
+    
+    
     @IBOutlet weak var deleteCell: UITableViewCell!
     
     required init?(coder aDecoder: NSCoder) {
@@ -52,15 +71,27 @@ class HabitViewController: UITableViewController {
         
         // Do any additional setup after loading the view.
         
+        //Add all Day button into array so we can loop through them easily
+        dayBtnArray = [MondayBtn, TuesdayBtn, WednesdayBtn, ThursdayBtn, FridayBtn, SaturdayBtn, SundayBtn];
+        
+        //And set up Day button's Day value in the dictionary as well
+        daysBtnDict = [MondayBtn:PAHSchedule.Days.M, TuesdayBtn: PAHSchedule.Days.T, WednesdayBtn: PAHSchedule.Days.W, ThursdayBtn: PAHSchedule.Days.Th, FridayBtn: PAHSchedule.Days.F, SaturdayBtn: PAHSchedule.Days.Sa, SundayBtn: PAHSchedule.Days.S]
+        
         if let h = habit{
             //Edit/Detail view! Populate all the fields
             isEdit = true
             habitTitleTextField.text = h.title
             noteTextField.text = h.note
             
+            scheduleEnum = (habit?.schedule.scheduleType)!
+            daysArray = (habit?.schedule.days)!
+            
+            //Set up the button status
+            setUpScheduleBtn()
+            setUpDaysBtn()
+            
             self.title = "\(h.title)"
             
-            print("note is \(h.note)")
 
         }else{
             //New Habit view!
@@ -69,6 +100,7 @@ class HabitViewController: UITableViewController {
             //deleteButton.hidden = true
             deleteCell.hidden = true;
             habitTitleTextField.placeholder = "New Habit"
+            scheduleEnum = PAHSchedule.Schedule.None
             
             self.title = "New Habit"
 
@@ -85,6 +117,7 @@ class HabitViewController: UITableViewController {
         
         // So we won't show empty cells at the bottom
         tableView.tableFooterView = UIView()
+        
         
         //
 //        naviBar.topItem?.leftBarButtonItem = back
@@ -106,13 +139,22 @@ class HabitViewController: UITableViewController {
     //func saveHabit(){
     
     @IBAction func saveHabit(sender: UIButton) {
+        
+        //getting the schedule stuff
+        
+        let schedule = createScheduleFromBtn()
 
         if !isEdit{
-            habit = PAHHabit(title: habitTitleTextField.text!, note: noteTextField.text!, schedule: PAHSchedule(type:PAHSchedule.Schedule.Daily, days: ["M"]))
+            
+            habit = PAHHabit(title: habitTitleTextField.text!, note: noteTextField.text!)
+            habit?.schedule = schedule
+            
         }else{
             //Modify the habit
             habit?.title = habitTitleTextField.text!
             habit?.note = noteTextField.text!
+            //Completely rewrite schedule
+            habit?.schedule = schedule
         }
         
         do{
@@ -127,6 +169,22 @@ class HabitViewController: UITableViewController {
         
         self.dismissViewControllerAnimated(true, completion: nil)
 
+    }
+    
+    func createScheduleFromBtn()->PAHSchedule{
+        
+        var dayArray: [PAHSchedule.Days] = []
+        
+        //Go through all the days button
+        for btn in dayBtnArray{
+            if btn.selected{
+                dayArray.append(daysBtnDict[btn]!)
+            }
+        }
+        
+        return PAHSchedule(type:scheduleEnum, days: dayArray)
+        
+        
     }
 
     @IBAction func deleteHabit(sender: UIButton) {
@@ -172,7 +230,58 @@ class HabitViewController: UITableViewController {
     
     // Mark: Schedule and Days buttons
     
+    
+    //Used during startup/init
+    func setUpScheduleBtn(){
+        
+        
+        switch scheduleEnum.rawValue {
+        case "Daily" :
+            scheduleDailyBtn.selected = true
+            
+        case "Weekly" :
+            scheduleWeeklyBtn.selected = true
+            
+        case "Monthly" :
+            scheduleMonthlyBtn.selected = true
+            
+        default:
+            print("setUpScheduleBTN is default")
+            break
+        }
+        
+    }
+    
+    func setUpDaysBtn(){
+        
+        //A very manual way...
+        for day in daysArray{
+            switch day {
+            case .M:
+                MondayBtn.selected = true
+            case .T:
+                TuesdayBtn.selected = true
+            case .W:
+                WednesdayBtn.selected = true
+            case .Th:
+                ThursdayBtn.selected = true
+            case .F:
+                FridayBtn.selected = true
+            case .Sa:
+                SaturdayBtn.selected = true
+            case .S:
+                SundayBtn.selected = true
+            default:
+                break
+            }
+        }
+        
+    }
+    
+    
+    
 
+    //Days button
     @IBAction func btnToggle(sender: UIButton) {
         sender.selected = !sender.selected
     }
@@ -186,16 +295,20 @@ class HabitViewController: UITableViewController {
         if sender.selected{
             switch sender.tag {
             case 1:
+                scheduleEnum = PAHSchedule.Schedule.Daily
                 scheduleWeeklyBtn.selected = false
                 scheduleMonthlyBtn.selected = false
             case 2:
+                scheduleEnum = PAHSchedule.Schedule.Weekly
                 scheduleDailyBtn.selected = false
                 scheduleMonthlyBtn.selected = false
             case 3:
+                scheduleEnum = PAHSchedule.Schedule.Monthly
                 scheduleDailyBtn.selected = false
                 scheduleWeeklyBtn.selected = false
                 
-            default: break
+            default:
+                scheduleEnum = PAHSchedule.Schedule.None
                 
             }
         }

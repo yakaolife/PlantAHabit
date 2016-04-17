@@ -17,7 +17,7 @@ class PAHHabit: NSObject {
     var title: String = "title"
     var note: String = ""
 
-    var schedule: PAHSchedule = PAHSchedule(type: PAHSchedule.Schedule.Daily, days: ["M", "T", "W", "Th", "F", "Sa", "S"])
+    var schedule: PAHSchedule = PAHSchedule(type: PAHSchedule.Schedule.Daily, days: "M,T,W,Th,F,Sa,S")
     
     //TODO: how to init this
     // Use plantType for now
@@ -42,14 +42,26 @@ class PAHHabit: NSObject {
         self.totalCount = (coreDataObj.valueForKey("totalCount") as? Int)!
         self.plantType = (coreDataObj.valueForKey("plantType") as? String)!
         self.uid = (coreDataObj.valueForKey("uid") as? String)!
+        
+        //Schedule
+        
+        let scheduleObj = (coreDataObj.valueForKey("schedule")) as! NSManagedObject
+        let type = scheduleObj.valueForKey("type") as? String
+        let days = scheduleObj.valueForKey("days") as? String
+        
+        schedule = PAHSchedule(type: PAHSchedule.Schedule(rawValue: type!)!, days: days!)
+        
+        schedule.habitUID = self.uid
+        
 
     }
     
-    init(title: String, note: String, schedule: PAHSchedule){
+    //Schedule is not required, since we have default
+    init(title: String, note: String){
         self.title = title
         self.note = note
-        self.schedule = schedule
         self.uid = PAHDataStore.sharedInstance.generateHabitUid(self.title)
+        self.schedule.habitUID = self.uid
         
         print("id is \(self.uid)")
         
@@ -62,7 +74,7 @@ class PAHHabit: NSObject {
     }
     
     func getRate()->Double{
-        print("getRate")
+        
         if self.completeCount == 0{
             return 0.0
         }else{

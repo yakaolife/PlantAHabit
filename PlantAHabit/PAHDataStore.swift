@@ -62,7 +62,8 @@ class PAHDataStore {
     }
     
     //Assuming habit title is unique
-    func getMangedObjectToSet(entityName: String)-> NSManagedObject{
+    func getManagedObjectToSet(entityName: String)-> NSManagedObject{
+        print("dataStore:getManageObjectToSet: entityName: \(entityName)")
         
         let entity = NSEntityDescription.entityForName(entityName, inManagedObjectContext: managedContext)
         
@@ -89,7 +90,7 @@ class PAHDataStore {
         
         //See if this is Modify
         //Find the original in Core Data to edit
-        let predicate = NSPredicate(format: "uid == %@", habit.uid!)
+        var predicate = NSPredicate(format: "uid == %@", habit.uid!)
         let foundHabit = fetchData("Habit", predicate: predicate)
             
         if foundHabit.count == 1{
@@ -100,15 +101,44 @@ class PAHDataStore {
             foundHabit[0].setValue(habit.totalCount, forKey: "totalCount")
             foundHabit[0].setValue(habit.completeCount, forKey: "completeCount")
             
+            //Schedule
+            predicate = NSPredicate(format: "habitUID == %@", habit.uid!)
+            let foundSchedule = fetchData("Schedule", predicate: predicate)
+            
+            if foundSchedule.count == 1{
+                
+                foundSchedule[0].setValue(habit.schedule.scheduleType.rawValue, forKey: "type")
+                foundSchedule[0].setValue(habit.schedule.dayArrayToString(), forKey: "days")
+                
+            }else{
+                print("No Schedule with a habit, something is wrong!")
+            }
+            
+            
         }else{
             //Save the new habit!
-            let coreHabit = getMangedObjectToSet("Habit")
+            
+            let coreHabit = getManagedObjectToSet("Habit")
             coreHabit.setValue(habit.title, forKey: "title")
             coreHabit.setValue(habit.note, forKey: "note")
             coreHabit.setValue("bush", forKey: "plantType")
             coreHabit.setValue(0, forKey: "completeCount")
             coreHabit.setValue(0, forKey: "totalCount")
             coreHabit.setValue(habit.uid, forKey: "uid")
+            
+            print("dataStore:saveHabit:new")
+            
+            //Schedule
+            let schedule = getManagedObjectToSet("Schedule")
+            
+            print("get schedule entity, and type rawValue is \(habit.schedule.scheduleType.rawValue), days: \(habit.schedule.dayArrayToString())")
+            schedule.setValue(habit.schedule.scheduleType.rawValue, forKey: "type")
+            schedule.setValue(habit.schedule.dayArrayToString(), forKey: "days")
+            schedule.setValue(habit.uid, forKey: "habitUID")
+            
+            coreHabit.setValue(schedule, forKey: "schedule")
+            
+            
         }
         
         do{
