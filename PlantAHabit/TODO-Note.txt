@@ -1,0 +1,13 @@
+TODO
+
+- Monthly with days doesn't really make sense, add date option? (15th of the month?, etc)
+- Show Habit on TodayViewController based on today's date
+- Add Plant
+
+- TodayViewController swipe action: after swipe, options
+- Setting page
+- Plant page
+
+
+
+NOTE

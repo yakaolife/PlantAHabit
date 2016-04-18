@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		89E195D3EF623377F61FA9CE /* libPods-PlantAHabit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D860DEEC9AB50CBE709AF5 /* libPods-PlantAHabit.a */; };
+		D037B2D71CC485E3005688F3 /* TODO-Note.txt in Resources */ = {isa = PBXBuildFile; fileRef = D037B2D61CC485E3005688F3 /* TODO-Note.txt */; };
 		D07696BB1CA5D9FF001DF6B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07696BA1CA5D9FF001DF6B7 /* AppDelegate.swift */; };
 		D07696C01CA5D9FF001DF6B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D07696BE1CA5D9FF001DF6B7 /* Main.storyboard */; };
 		D07696C31CA5D9FF001DF6B7 /* PlantAHabit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D07696C11CA5D9FF001DF6B7 /* PlantAHabit.xcdatamodeld */; };
@@ -52,6 +53,7 @@
 		5585F96FBF74DA100F523512 /* Pods-PlantAHabit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantAHabit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlantAHabit/Pods-PlantAHabit.debug.xcconfig"; sourceTree = "<group>"; };
 		AFAEB530093409B8972088DA /* Pods-PlantAHabit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantAHabit.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlantAHabit/Pods-PlantAHabit.release.xcconfig"; sourceTree = "<group>"; };
 		D00ACE601CA854220069CAD7 /* PlantAHabit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlantAHabit-Bridging-Header.h"; sourceTree = "<group>"; };
+		D037B2D61CC485E3005688F3 /* TODO-Note.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "TODO-Note.txt"; sourceTree = "<group>"; };
 		D07696B71CA5D9FF001DF6B7 /* PlantAHabit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantAHabit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07696BA1CA5D9FF001DF6B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D07696BF1CA5D9FF001DF6B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		D07696B91CA5D9FF001DF6B7 /* PlantAHabit */ = {
 			isa = PBXGroup;
 			children = (
+				D037B2D61CC485E3005688F3 /* TODO-Note.txt */,
 				D07696EC1CA60201001DF6B7 /* ViewController */,
 				D07696EB1CA601FA001DF6B7 /* Model */,
 				D07696BA1CA5D9FF001DF6B7 /* AppDelegate.swift */,
@@ -326,6 +329,7 @@
 			files = (
 				D07696C81CA5D9FF001DF6B7 /* LaunchScreen.storyboard in Resources */,
 				D07696C51CA5D9FF001DF6B7 /* Assets.xcassets in Resources */,
+				D037B2D71CC485E3005688F3 /* TODO-Note.txt in Resources */,
 				D07696C01CA5D9FF001DF6B7 /* Main.storyboard in Resources */,
 				D0FD04CD1CA719FA000D2818 /* list-fat-7.png in Resources */,
 				D0FD04CF1CA71A25000D2818 /* circle-user-7.png in Resources */,
