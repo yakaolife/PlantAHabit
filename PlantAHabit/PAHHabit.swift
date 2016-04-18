@@ -18,6 +18,7 @@ class PAHHabit: NSObject {
     var note: String = ""
 
     var schedule: PAHSchedule = PAHSchedule(type: PAHSchedule.Schedule.Daily, days: "M,T,W,Th,F,Sa,S")
+    //var created: String? //NSDate, in YYYY-MM-DD format
     
     //TODO: how to init this
     // Use plantType for now

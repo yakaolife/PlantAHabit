@@ -39,6 +39,7 @@ class HabitViewController: UITableViewController {
     var scheduleEnum =  PAHSchedule.Schedule.None
     var daysArray : [PAHSchedule.Days] = []
     
+    
     //schedule button
     @IBOutlet weak var scheduleDailyBtn: UIButton!
     @IBOutlet weak var scheduleWeeklyBtn: UIButton!
@@ -87,24 +88,24 @@ class HabitViewController: UITableViewController {
             daysArray = (habit?.schedule.days)!
             
             self.title = "\(h.title)"
-            
-            //Set up the button status
-            setUpScheduleBtn()
-            setUpDaysBtn()
-            
 
         }else{
             //New Habit view!
             
             //Hide the delete button!
-            //deleteButton.hidden = true
             deleteCell.hidden = true;
             habitTitleTextField.placeholder = "New Habit"
-            scheduleEnum = PAHSchedule.Schedule.None
             
+            //TODO: I should probably just create new Habit and schedule here now...?
+            scheduleEnum = PAHSchedule.Schedule.Daily
+            daysArray = [PAHSchedule.Days.M, PAHSchedule.Days.T,PAHSchedule.Days.W,PAHSchedule.Days.Th,PAHSchedule.Days.F, PAHSchedule.Days.Sa, PAHSchedule.Days.S]
             self.title = "New Habit"
 
         }
+        
+        //Set up the button status
+        setUpScheduleBtn()
+        setUpDaysBtn()
         
         //Customizing the navigation bar
         
@@ -254,14 +255,6 @@ class HabitViewController: UITableViewController {
     
     func setUpDaysBtn(){
         
-        
-        //A very manual way...
-        //Default btn are selected, unselect them
-        for btn in dayBtnArray{
-            btn.selected = false
-        }
-        
-        
         for day in daysArray{
             switch day {
             case .M:
@@ -288,6 +281,12 @@ class HabitViewController: UITableViewController {
 
     //Days button
     @IBAction func btnToggle(sender: UIButton) {
+        
+        //Only Weekly can toggle the Day buttons
+        if scheduleEnum != PAHSchedule.Schedule.Weekly{
+            self.scheduleBtnClick(scheduleWeeklyBtn)
+        }
+        
         sender.selected = !sender.selected
     }
 
@@ -302,6 +301,8 @@ class HabitViewController: UITableViewController {
                 scheduleDailyBtn.selected = true
                 scheduleWeeklyBtn.selected = false
                 scheduleMonthlyBtn.selected = false
+                selectAllDaysBtn()
+                
             case 2:
                 scheduleEnum = PAHSchedule.Schedule.Weekly
                 scheduleWeeklyBtn.selected = true
@@ -320,7 +321,14 @@ class HabitViewController: UITableViewController {
         
     }
     
-    
+    func selectAllDaysBtn(){
+        
+        //If Daily button is clicked, we need to select all the days
+        for btn in dayBtnArray {
+            btn.selected = true
+        }
+        
+    }
     
 
     
