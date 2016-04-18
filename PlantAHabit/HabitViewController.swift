@@ -86,11 +86,11 @@ class HabitViewController: UITableViewController {
             scheduleEnum = (habit?.schedule.scheduleType)!
             daysArray = (habit?.schedule.days)!
             
+            self.title = "\(h.title)"
+            
             //Set up the button status
             setUpScheduleBtn()
             setUpDaysBtn()
-            
-            self.title = "\(h.title)"
             
 
         }else{
@@ -234,27 +234,34 @@ class HabitViewController: UITableViewController {
     //Used during startup/init
     func setUpScheduleBtn(){
         
-        
         switch scheduleEnum.rawValue {
         case "Daily" :
-            scheduleDailyBtn.selected = true
+            self.scheduleBtnClick(scheduleDailyBtn)
             
         case "Weekly" :
-            scheduleWeeklyBtn.selected = true
+            self.scheduleBtnClick(scheduleWeeklyBtn)
             
         case "Monthly" :
-            scheduleMonthlyBtn.selected = true
+            self.scheduleBtnClick(scheduleMonthlyBtn)
             
         default:
             print("setUpScheduleBTN is default")
             break
         }
+            
         
     }
     
     func setUpDaysBtn(){
         
+        
         //A very manual way...
+        //Default btn are selected, unselect them
+        for btn in dayBtnArray{
+            btn.selected = false
+        }
+        
+        
         for day in daysArray{
             switch day {
             case .M:
@@ -278,8 +285,6 @@ class HabitViewController: UITableViewController {
         
     }
     
-    
-    
 
     //Days button
     @IBAction func btnToggle(sender: UIButton) {
@@ -289,21 +294,22 @@ class HabitViewController: UITableViewController {
 
     @IBAction func scheduleBtnClick(sender: UIButton) {
         //Daily tag = 1, weekly = 2, monthly = 3
-        sender.selected = !sender.selected
         
         //Toggle other ones if sender is selected
-        if sender.selected{
             switch sender.tag {
             case 1:
                 scheduleEnum = PAHSchedule.Schedule.Daily
+                scheduleDailyBtn.selected = true
                 scheduleWeeklyBtn.selected = false
                 scheduleMonthlyBtn.selected = false
             case 2:
                 scheduleEnum = PAHSchedule.Schedule.Weekly
+                scheduleWeeklyBtn.selected = true
                 scheduleDailyBtn.selected = false
                 scheduleMonthlyBtn.selected = false
             case 3:
                 scheduleEnum = PAHSchedule.Schedule.Monthly
+                scheduleMonthlyBtn.selected = true
                 scheduleDailyBtn.selected = false
                 scheduleWeeklyBtn.selected = false
                 
@@ -311,7 +317,6 @@ class HabitViewController: UITableViewController {
                 scheduleEnum = PAHSchedule.Schedule.None
                 
             }
-        }
         
     }
     
