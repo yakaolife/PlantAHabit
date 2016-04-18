@@ -25,7 +25,6 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     let dataStore = PAHDataStore.sharedInstance
     
-    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
      
@@ -61,16 +60,47 @@ class TodayViewController: UIViewController, UITableViewDelegate, UITableViewDat
     //Load from Core Data
     
     func loadCoreData(){
+        //For debugging
+        var show = 0
+        var notShow = 0
+        
+        
         let coreHabits = dataStore.fetchData("Habit", predicate: nil)
         //Clean up habitArray
         habitArray.removeAll()
         
         for data in coreHabits{
             let habit  = PAHHabit(coreDataObj: data)
-            habitArray.append(habit)
+            if showHabit(habit.schedule) {
+                habitArray.append(habit)
+                show += 1
+            }else{
+                notShow += 1
+            }
         }
         
+        print("Show \(show) habits, \(notShow) habits not shown")
         tableView.reloadData()
+    }
+    
+    //Sort habit by schedule and date!
+    
+    func showHabit(schedule: PAHSchedule) -> Bool{
+        
+        //get today's date & info
+        let calendar = NSCalendar.currentCalendar()
+        let todayDate = NSDate()
+        let todayDay = calendar.component(.Weekday, fromDate: todayDate)
+        
+        //loop through schedule's day
+        for day in schedule.days{
+            if day == schedule.getDayfromNum(todayDay) {
+                return true
+            }
+        }
+        
+        return false
+        
     }
     
     

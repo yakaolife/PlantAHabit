@@ -38,6 +38,8 @@ class PAHSchedule: NSObject {
         self.stringToDayArray(days)
     }
     
+    // MARK: Helper functions
+    
     //TODO: clean up and have all function in same format: return or set property?
     
     func stringToDayArray(input: String){
@@ -72,6 +74,30 @@ class PAHSchedule: NSObject {
             self.days.append(dayEnum!)
             
         }
+    }
+    
+    //For iOS NSCalendar/CalendarComponent's Weekday
+    func getDayfromNum(num : Int) -> PAHSchedule.Days? {
+        
+        switch num {
+        case 1:
+            return PAHSchedule.Days.S
+        case 2:
+            return PAHSchedule.Days.M
+        case 3:
+            return PAHSchedule.Days.T
+        case 4:
+            return PAHSchedule.Days.W
+        case 5:
+            return PAHSchedule.Days.Th
+        case 6:
+            return PAHSchedule.Days.F
+        case 7:
+            return PAHSchedule.Days.Sa
+        default: break
+            
+        }
+        return nil
     }
 
     

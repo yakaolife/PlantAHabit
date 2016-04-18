@@ -324,7 +324,7 @@ class HabitViewController: UITableViewController {
     
 
     
-    // Mark: TableView functions
+    // MARK: TableView functions
     
     //A very hacky way of making static cell disappear on runtime
     

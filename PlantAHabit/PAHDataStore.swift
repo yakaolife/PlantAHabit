@@ -63,7 +63,7 @@ class PAHDataStore {
     
     //Assuming habit title is unique
     func getManagedObjectToSet(entityName: String)-> NSManagedObject{
-        print("dataStore:getManageObjectToSet: entityName: \(entityName)")
+        //print("dataStore:getManageObjectToSet: entityName: \(entityName)")
         
         let entity = NSEntityDescription.entityForName(entityName, inManagedObjectContext: managedContext)
         
@@ -126,12 +126,12 @@ class PAHDataStore {
             coreHabit.setValue(0, forKey: "totalCount")
             coreHabit.setValue(habit.uid, forKey: "uid")
             
-            print("dataStore:saveHabit:new")
+            //print("dataStore:saveHabit:new")
             
             //Schedule
             let schedule = getManagedObjectToSet("Schedule")
             
-            print("get schedule entity, and type rawValue is \(habit.schedule.scheduleType.rawValue), days: \(habit.schedule.dayArrayToString())")
+            //print("get schedule entity, and type rawValue is \(habit.schedule.scheduleType.rawValue), days: \(habit.schedule.dayArrayToString())")
             schedule.setValue(habit.schedule.scheduleType.rawValue, forKey: "type")
             schedule.setValue(habit.schedule.dayArrayToString(), forKey: "days")
             schedule.setValue(habit.uid, forKey: "habitUID")

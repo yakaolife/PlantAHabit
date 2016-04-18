@@ -1,12 +1,16 @@
 TODO
 
-- Monthly with days doesn't really make sense, add date option? (15th of the month?, etc)
+
 - Show Habit on TodayViewController based on today's date
+(Only support Gregorian calendar now, for weekday calculation)
 - Add Plant
 
 - TodayViewController swipe action: after swipe, options
+
+- Monthly with days doesn't really make sense, add date option? (15th of the month?, etc)
 - Setting page
 - Plant page
+
 
 
 
