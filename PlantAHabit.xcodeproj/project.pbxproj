@@ -24,9 +24,6 @@
 		D0FD04C11CA70E19000D2818 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FD04C01CA70E19000D2818 /* SettingViewController.swift */; };
 		D0FD04C31CA70E50000D2818 /* HabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FD04C21CA70E50000D2818 /* HabitViewController.swift */; };
 		D0FD04C61CA713AB000D2818 /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FD04C51CA713AB000D2818 /* HabitTableViewCell.swift */; };
-		D0FD04CB1CA719C8000D2818 /* plus-simple-7.png in Resources */ = {isa = PBXBuildFile; fileRef = D0FD04CA1CA719C8000D2818 /* plus-simple-7.png */; };
-		D0FD04CD1CA719FA000D2818 /* list-fat-7.png in Resources */ = {isa = PBXBuildFile; fileRef = D0FD04CC1CA719FA000D2818 /* list-fat-7.png */; };
-		D0FD04CF1CA71A25000D2818 /* circle-user-7.png in Resources */ = {isa = PBXBuildFile; fileRef = D0FD04CE1CA71A25000D2818 /* circle-user-7.png */; };
 		D0FD04D11CA71CCD000D2818 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FD04D01CA71CCD000D2818 /* MyTabBarController.swift */; };
 		D0FD04D31CA72C07000D2818 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FD04D21CA72C07000D2818 /* BaseViewController.swift */; };
 		D0FD04D51CA76BE4000D2818 /* PAHDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FD04D41CA76BE4000D2818 /* PAHDataStore.swift */; };
@@ -75,9 +72,6 @@
 		D0FD04C01CA70E19000D2818 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		D0FD04C21CA70E50000D2818 /* HabitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitViewController.swift; sourceTree = "<group>"; };
 		D0FD04C51CA713AB000D2818 /* HabitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
-		D0FD04CA1CA719C8000D2818 /* plus-simple-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus-simple-7.png"; sourceTree = "<group>"; };
-		D0FD04CC1CA719FA000D2818 /* list-fat-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-fat-7.png"; sourceTree = "<group>"; };
-		D0FD04CE1CA71A25000D2818 /* circle-user-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-user-7.png"; sourceTree = "<group>"; };
 		D0FD04D01CA71CCD000D2818 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 		D0FD04D21CA72C07000D2818 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D0FD04D41CA76BE4000D2818 /* PAHDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAHDataStore.swift; sourceTree = "<group>"; };
@@ -149,7 +143,6 @@
 				D07696BA1CA5D9FF001DF6B7 /* AppDelegate.swift */,
 				D00ACE601CA854220069CAD7 /* PlantAHabit-Bridging-Header.h */,
 				D07696BE1CA5D9FF001DF6B7 /* Main.storyboard */,
-				D0FD04C91CA71904000D2818 /* Image */,
 				D07696C41CA5D9FF001DF6B7 /* Assets.xcassets */,
 				D07696C61CA5D9FF001DF6B7 /* LaunchScreen.storyboard */,
 				D07696C91CA5D9FF001DF6B7 /* Info.plist */,
@@ -199,16 +192,6 @@
 				D0FD04D21CA72C07000D2818 /* BaseViewController.swift */,
 			);
 			name = ViewController;
-			sourceTree = "<group>";
-		};
-		D0FD04C91CA71904000D2818 /* Image */ = {
-			isa = PBXGroup;
-			children = (
-				D0FD04CE1CA71A25000D2818 /* circle-user-7.png */,
-				D0FD04CC1CA719FA000D2818 /* list-fat-7.png */,
-				D0FD04CA1CA719C8000D2818 /* plus-simple-7.png */,
-			);
-			name = Image;
 			sourceTree = "<group>";
 		};
 		DF2B03AC0264D02F1D5DEC23 /* Pods */ = {
@@ -331,9 +314,6 @@
 				D07696C51CA5D9FF001DF6B7 /* Assets.xcassets in Resources */,
 				D037B2D71CC485E3005688F3 /* TODO-Note.txt in Resources */,
 				D07696C01CA5D9FF001DF6B7 /* Main.storyboard in Resources */,
-				D0FD04CD1CA719FA000D2818 /* list-fat-7.png in Resources */,
-				D0FD04CF1CA71A25000D2818 /* circle-user-7.png in Resources */,
-				D0FD04CB1CA719C8000D2818 /* plus-simple-7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

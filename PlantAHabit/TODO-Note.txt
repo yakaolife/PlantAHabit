@@ -1,21 +1,37 @@
 TODO
 
 -Fix schedule:
-- Daily: everyday (automatically selects everyday)
-- Weekly: can choose which day to select
--Monthly: Day of the month?
+-Monthly: Day of the month? ->Click button to a new page?
+
+- Add Plant (with basic image right now)
+
+Image: (1st cut)
+3 plants
+4 stages
 
 
+- study how image work in iOS version
+    - Study iOS Design Guideline
 
-- Show Habit on TodayViewController based on today's date
+iOS
+https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html#//apple_ref/doc/uid/TP40006556-CH66-SW1
+https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html
 
-- Add Plant
+- Add Plant selection to HabitViewController
+    - New
+    - Modify - just show the image, with current status
+
+- Add to Habit/Plant View (Grid)
+
+
 
 - TodayViewController swipe action: after swipe, options
 
 - Monthly with days doesn't really make sense, add date option? (15th of the month?, etc)
 - Setting page
 - Plant page
+
+- Add first time tutorial (overlay)
 
 
 NOTE

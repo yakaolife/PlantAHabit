@@ -14,7 +14,7 @@ import UIKit
 class PAHPlant: NSObject {
     
     //TODO: Add more status in the future?
-    enum Growth{
+    enum Growth : String{
         case None, Baby, Teen, Adult, Flower, Fruit
         
         mutating func next(){
@@ -67,6 +67,13 @@ class PAHPlant: NSObject {
     init(plantType: String){
         
         self.type = plantType
+    }
+    
+    //From Core Data
+    init(plantType: String, growthStatus: String){
+        
+        self.type = plantType
+        self.growthStatus = Growth(rawValue: growthStatus)!
     }
 
 }
