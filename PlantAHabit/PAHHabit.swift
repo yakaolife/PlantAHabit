@@ -54,17 +54,22 @@ class PAHHabit: NSObject {
         
         schedule.habitUID = self.uid
         
+        //Plant
+        
+        
 
     }
     
     //Schedule is not required, since we have default
-    init(title: String, note: String){
+    init(title: String, note: String, plantType: String){
         self.title = title
         self.note = note
         self.uid = PAHDataStore.sharedInstance.generateHabitUid(self.title)
         self.schedule.habitUID = self.uid
         
         print("id is \(self.uid)")
+        
+        
         
 //        if(plant != nil){
 //            self.plant = PAHPlant()

@@ -64,12 +64,12 @@ class PAHPlant: NSObject {
     //Usage: growthStatus.next() to advance type
     var growthStatus: Growth = .None
     
-    init(plantType: String){
-        
-        self.type = plantType
-    }
+//    init(plantType: String){
+//        
+//        self.type = plantType
+//    }
     
-    //From Core Data
+    //Regular init and from Core Data
     init(plantType: String, growthStatus: String){
         
         self.type = plantType

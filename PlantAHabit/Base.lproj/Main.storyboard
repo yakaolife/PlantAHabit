@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sLT-7D-esr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sLT-7D-esr">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -145,20 +145,47 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" tag="2" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="149" id="dkd-Bo-iHP">
-                                        <rect key="frame" x="0.0" y="281" width="600" height="149"/>
+                                    <tableViewCell clipsSubviews="YES" tag="2" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="170" id="dkd-Bo-iHP">
+                                        <rect key="frame" x="0.0" y="281" width="600" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dkd-Bo-iHP" id="JH7-eg-YGv">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="148.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="169.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected Plant details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDR-kw-n3i">
-                                                    <rect key="frame" x="8" y="8" width="166" height="21"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Usd-VN-Y56">
+                                                    <rect key="frame" x="22" y="8" width="150" height="150"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xib-0P-hKr">
+                                                    <rect key="frame" x="180" y="8" width="77" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ska-bz-XNj">
+                                                    <rect key="frame" x="180" y="37" width="50" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Funny quotes and stuff, may need to use a json file" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwP-PM-tJ9">
+                                                    <rect key="frame" x="180" y="66" width="388" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Usd-VN-Y56" firstAttribute="leading" secondItem="JH7-eg-YGv" secondAttribute="leadingMargin" constant="14" id="2Hv-Ry-4cv"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="pwP-PM-tJ9" secondAttribute="trailing" constant="24" id="2gE-xl-on6"/>
+                                                <constraint firstItem="Xib-0P-hKr" firstAttribute="leading" secondItem="Usd-VN-Y56" secondAttribute="trailing" constant="8" symbolic="YES" id="DdT-2D-vgh"/>
+                                                <constraint firstItem="Ska-bz-XNj" firstAttribute="leading" secondItem="pwP-PM-tJ9" secondAttribute="leading" id="Eb4-Dp-v92"/>
+                                                <constraint firstItem="Usd-VN-Y56" firstAttribute="top" secondItem="JH7-eg-YGv" secondAttribute="topMargin" id="I9G-aw-9jS"/>
+                                                <constraint firstItem="Ska-bz-XNj" firstAttribute="top" secondItem="Xib-0P-hKr" secondAttribute="bottom" constant="8" symbolic="YES" id="Stc-If-vJ9"/>
+                                                <constraint firstItem="Xib-0P-hKr" firstAttribute="leading" secondItem="Ska-bz-XNj" secondAttribute="leading" id="hd5-fa-6wY"/>
+                                                <constraint firstItem="pwP-PM-tJ9" firstAttribute="top" secondItem="Ska-bz-XNj" secondAttribute="bottom" constant="8" symbolic="YES" id="i0k-un-05r"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Usd-VN-Y56" secondAttribute="bottom" constant="3.5" id="j1J-7K-8MQ"/>
+                                                <constraint firstItem="Usd-VN-Y56" firstAttribute="top" secondItem="Xib-0P-hKr" secondAttribute="top" id="n7d-zO-FOb"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -166,7 +193,7 @@
                             <tableViewSection headerTitle="Schedule" id="mcB-GU-gJD">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="Q1b-Oh-e83">
-                                        <rect key="frame" x="0.0" y="458" width="600" height="50"/>
+                                        <rect key="frame" x="0.0" y="479" width="600" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q1b-Oh-e83" id="8KP-5g-RDy">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
@@ -229,7 +256,7 @@
                             <tableViewSection headerTitle="Days" id="RZi-vN-s9W">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="sz4-TO-lCV">
-                                        <rect key="frame" x="0.0" y="536" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="557" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sz4-TO-lCV" id="9pZ-Tl-Q25">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -316,7 +343,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GLf-Nb-2Oz">
-                                        <rect key="frame" x="0.0" y="580" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="601" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GLf-Nb-2Oz" id="Igi-rX-Jb9">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -336,7 +363,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" tag="3" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="CiO-aO-qbg">
-                                        <rect key="frame" x="0.0" y="624" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="645" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CiO-aO-qbg" id="ukw-Gp-GL5">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -384,6 +411,10 @@
                         <outlet property="habitTitleTextField" destination="2Az-kd-JSq" id="Ux3-Ad-Jdl"/>
                         <outlet property="menuCell" destination="4sc-tW-HFa" id="F5C-Tq-EgL"/>
                         <outlet property="noteTextField" destination="eSb-9P-U3F" id="gMo-We-J5p"/>
+                        <outlet property="plantImage" destination="Usd-VN-Y56" id="YU1-Lg-mUE"/>
+                        <outlet property="plantQuoteLabel" destination="pwP-PM-tJ9" id="GSl-hH-xyU"/>
+                        <outlet property="plantStatusLabel" destination="Ska-bz-XNj" id="A58-1c-he5"/>
+                        <outlet property="plantTypeLabel" destination="Xib-0P-hKr" id="FMP-DH-Yj1"/>
                         <outlet property="scheduleDailyBtn" destination="vHW-EL-xwp" id="uGK-ZC-1e9"/>
                         <outlet property="scheduleMonthlyBtn" destination="Nnf-OY-po4" id="2lu-lI-0q3"/>
                         <outlet property="scheduleWeeklyBtn" destination="who-dA-zHg" id="39z-PV-3H0"/>

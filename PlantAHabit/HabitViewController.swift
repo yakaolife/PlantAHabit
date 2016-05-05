@@ -54,6 +54,12 @@ class HabitViewController: UITableViewController {
     @IBOutlet weak var SaturdayBtn: UIButton!
     @IBOutlet weak var SundayBtn: UIButton!
     
+    //Selected Plant Cell
+    @IBOutlet weak var plantImage: UIImageView!
+    @IBOutlet weak var plantTypeLabel: UILabel!
+    @IBOutlet weak var plantStatusLabel: UILabel!
+    @IBOutlet weak var plantQuoteLabel: UILabel!
+    
     
     @IBOutlet weak var deleteCell: UITableViewCell!
     
@@ -147,7 +153,7 @@ class HabitViewController: UITableViewController {
 
         if !isEdit{
             
-            habit = PAHHabit(title: habitTitleTextField.text!, note: noteTextField.text!)
+            habit = PAHHabit(title: habitTitleTextField.text!, note: noteTextField.text!, plantType: "test")
             habit?.schedule = schedule
             
         }else{

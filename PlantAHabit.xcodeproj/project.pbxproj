@@ -16,6 +16,7 @@
 		D07696C81CA5D9FF001DF6B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D07696C61CA5D9FF001DF6B7 /* LaunchScreen.storyboard */; };
 		D07696D31CA5D9FF001DF6B7 /* PlantAHabitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07696D21CA5D9FF001DF6B7 /* PlantAHabitTests.swift */; };
 		D07696DE1CA5D9FF001DF6B7 /* PlantAHabitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07696DD1CA5D9FF001DF6B7 /* PlantAHabitUITests.swift */; };
+		D09B39571CDAF8EC00BD56C1 /* plantQuotes.json in Resources */ = {isa = PBXBuildFile; fileRef = D09B39561CDAF8EC00BD56C1 /* plantQuotes.json */; };
 		D0FD04B51CA63632000D2818 /* PAHHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FD04B41CA63632000D2818 /* PAHHabit.swift */; };
 		D0FD04B71CA6365B000D2818 /* PAHPlant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FD04B61CA6365B000D2818 /* PAHPlant.swift */; };
 		D0FD04BB1CA63E2D000D2818 /* PAHSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FD04BA1CA63E2D000D2818 /* PAHSchedule.swift */; };
@@ -64,6 +65,7 @@
 		D07696D91CA5D9FF001DF6B7 /* PlantAHabitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantAHabitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07696DD1CA5D9FF001DF6B7 /* PlantAHabitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantAHabitUITests.swift; sourceTree = "<group>"; };
 		D07696DF1CA5D9FF001DF6B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D09B39561CDAF8EC00BD56C1 /* plantQuotes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = plantQuotes.json; sourceTree = "<group>"; };
 		D0FD04B41CA63632000D2818 /* PAHHabit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAHHabit.swift; sourceTree = "<group>"; };
 		D0FD04B61CA6365B000D2818 /* PAHPlant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAHPlant.swift; sourceTree = "<group>"; };
 		D0FD04BA1CA63E2D000D2818 /* PAHSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAHSchedule.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		D07696AE1CA5D9FF001DF6B7 = {
 			isa = PBXGroup;
 			children = (
+				D09B39561CDAF8EC00BD56C1 /* plantQuotes.json */,
 				D07696B91CA5D9FF001DF6B7 /* PlantAHabit */,
 				D07696D11CA5D9FF001DF6B7 /* PlantAHabitTests */,
 				D07696DC1CA5D9FF001DF6B7 /* PlantAHabitUITests */,
@@ -314,6 +317,7 @@
 				D07696C51CA5D9FF001DF6B7 /* Assets.xcassets in Resources */,
 				D037B2D71CC485E3005688F3 /* TODO-Note.txt in Resources */,
 				D07696C01CA5D9FF001DF6B7 /* Main.storyboard in Resources */,
+				D09B39571CDAF8EC00BD56C1 /* plantQuotes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
