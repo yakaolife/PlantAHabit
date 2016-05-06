@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		89E195D3EF623377F61FA9CE /* libPods-PlantAHabit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D860DEEC9AB50CBE709AF5 /* libPods-PlantAHabit.a */; };
+		4DB22BA7B17368E5006E678F /* Pods_PlantAHabit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AEC5F96C5CA2582A604DD0 /* Pods_PlantAHabit.framework */; };
 		D037B2D71CC485E3005688F3 /* TODO-Note.txt in Resources */ = {isa = PBXBuildFile; fileRef = D037B2D61CC485E3005688F3 /* TODO-Note.txt */; };
 		D07696BB1CA5D9FF001DF6B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07696BA1CA5D9FF001DF6B7 /* AppDelegate.swift */; };
 		D07696C01CA5D9FF001DF6B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D07696BE1CA5D9FF001DF6B7 /* Main.storyboard */; };
@@ -17,6 +17,7 @@
 		D07696D31CA5D9FF001DF6B7 /* PlantAHabitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07696D21CA5D9FF001DF6B7 /* PlantAHabitTests.swift */; };
 		D07696DE1CA5D9FF001DF6B7 /* PlantAHabitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07696DD1CA5D9FF001DF6B7 /* PlantAHabitUITests.swift */; };
 		D09B39571CDAF8EC00BD56C1 /* plantQuotes.json in Resources */ = {isa = PBXBuildFile; fileRef = D09B39561CDAF8EC00BD56C1 /* plantQuotes.json */; };
+		D0B17D821CDB0ADD0000CF95 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B17D811CDB0ADD0000CF95 /* SwiftyJSON.framework */; };
 		D0FD04B51CA63632000D2818 /* PAHHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FD04B41CA63632000D2818 /* PAHHabit.swift */; };
 		D0FD04B71CA6365B000D2818 /* PAHPlant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FD04B61CA6365B000D2818 /* PAHPlant.swift */; };
 		D0FD04BB1CA63E2D000D2818 /* PAHSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FD04BA1CA63E2D000D2818 /* PAHSchedule.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		5585F96FBF74DA100F523512 /* Pods-PlantAHabit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantAHabit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlantAHabit/Pods-PlantAHabit.debug.xcconfig"; sourceTree = "<group>"; };
+		84AEC5F96C5CA2582A604DD0 /* Pods_PlantAHabit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlantAHabit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFAEB530093409B8972088DA /* Pods-PlantAHabit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantAHabit.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlantAHabit/Pods-PlantAHabit.release.xcconfig"; sourceTree = "<group>"; };
 		D00ACE601CA854220069CAD7 /* PlantAHabit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlantAHabit-Bridging-Header.h"; sourceTree = "<group>"; };
 		D037B2D61CC485E3005688F3 /* TODO-Note.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "TODO-Note.txt"; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		D07696DD1CA5D9FF001DF6B7 /* PlantAHabitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantAHabitUITests.swift; sourceTree = "<group>"; };
 		D07696DF1CA5D9FF001DF6B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D09B39561CDAF8EC00BD56C1 /* plantQuotes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = plantQuotes.json; sourceTree = "<group>"; };
+		D0B17D811CDB0ADD0000CF95 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/PlantAHabit-hhwajcxqjceyoubzvcnrfgaqbirs/Build/Products/Debug-iphonesimulator/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D0FD04B41CA63632000D2818 /* PAHHabit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAHHabit.swift; sourceTree = "<group>"; };
 		D0FD04B61CA6365B000D2818 /* PAHPlant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAHPlant.swift; sourceTree = "<group>"; };
 		D0FD04BA1CA63E2D000D2818 /* PAHSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAHSchedule.swift; sourceTree = "<group>"; };
@@ -77,7 +80,6 @@
 		D0FD04D01CA71CCD000D2818 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 		D0FD04D21CA72C07000D2818 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D0FD04D41CA76BE4000D2818 /* PAHDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAHDataStore.swift; sourceTree = "<group>"; };
-		F2D860DEEC9AB50CBE709AF5 /* libPods-PlantAHabit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlantAHabit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89E195D3EF623377F61FA9CE /* libPods-PlantAHabit.a in Frameworks */,
+				D0B17D821CDB0ADD0000CF95 /* SwiftyJSON.framework in Frameworks */,
+				4DB22BA7B17368E5006E678F /* Pods_PlantAHabit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +112,8 @@
 		5C1FAA67506306008D943723 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F2D860DEEC9AB50CBE709AF5 /* libPods-PlantAHabit.a */,
+				D0B17D811CDB0ADD0000CF95 /* SwiftyJSON.framework */,
+				84AEC5F96C5CA2582A604DD0 /* Pods_PlantAHabit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

@@ -1,24 +1,17 @@
-{"plantQuotes":
-    [
-     {"testBush":[{"None":"Well, you just started!"},
-                  {"Baby":"Hello! Tiny baby bush"},
-                  {"Teen":"It wants to grow sideways...I wonder if this is teenage rebellion?"},
-                  {"Adult":"Congradulation, you can now buy alcohol...no, I mean, fertilizer?"},
-                  {"Flower":"The time when adulthood isn't as fun as I thought"},
-                  {"Fruit":"THE ADULTHOOD ISN'T FUN AT ALL WHELP"}]},
-     {"testCactus":[{"None":"Already poky when you start"},
-                    {"Baby":"BALD"},
-                    {"Teen":"Still bald"},
-                    {"Adult":"Hi I am a full grown cactus"},
-                    {"Flower":"The contrast is so in trend now, I look cute and also will poke your fingers"},
-                    {"Fruit":"Alien?"}]},
-     {"testTulip":[{"None":"Getting a flower this time?"},
-                    {"Baby":"Growing...growing...growing..."},
-                    {"Teen":"Rain drop falling to my head~"},
-                    {"Adult":"Something good is coming out of this!"},
-                    {"Flower":"Woahhhhhhhhhh "},
-                    {"Fruit":"You did it!!"}]}
-     ]}
+{
+    "plantQuotes": {
+        "testBush": {
+            "None": "Well, you just started!",
+            "Baby": "Hello! Tiny baby bush",
+            "Teen":"It wants to grow sideways...I wonder if this is teenage rebellion?",
+            "Adult":"Congradulation, you can now buy alcohol...no, I mean, fertilizer?",
+            "Flower":"The time when adulthood isn't as fun as I thought",
+            "Fruit":"THE ADULTHOOD ISN'T FUN AT ALL WHELP"
+        }
+
+    }
+}
+
      
 
                 

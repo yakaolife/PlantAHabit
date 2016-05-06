@@ -38,3 +38,5 @@ NOTE
 
 - Only support Gregorian calendar now, for weekday calculation
 - Don't let user create single day habit!
+- Not sure about how to do Monthly
+- Using SwiftyJSON for parsing plantQuotes

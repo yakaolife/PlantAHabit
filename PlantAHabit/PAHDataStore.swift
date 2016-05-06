@@ -114,6 +114,10 @@ class PAHDataStore {
                 print("No Schedule with a habit, something is wrong!")
             }
             
+            //Plant
+            //Can only modify the Growth Status
+            foundHabit[0].setValue(habit.plantStatus.rawValue, forKey: "plantStatus")
+            
             
         }else{
             //Save the new habit!
@@ -121,7 +125,6 @@ class PAHDataStore {
             let coreHabit = getManagedObjectToSet("Habit")
             coreHabit.setValue(habit.title, forKey: "title")
             coreHabit.setValue(habit.note, forKey: "note")
-            coreHabit.setValue("bush", forKey: "plantType")
             coreHabit.setValue(0, forKey: "completeCount")
             coreHabit.setValue(0, forKey: "totalCount")
             coreHabit.setValue(habit.uid, forKey: "uid")
@@ -137,6 +140,10 @@ class PAHDataStore {
             schedule.setValue(habit.uid, forKey: "habitUID")
             
             coreHabit.setValue(schedule, forKey: "schedule")
+            
+            //Plant
+            coreHabit.setValue(habit.plantType, forKey: "plantType")
+            coreHabit.setValue(habit.plantStatus.rawValue, forKey: "plantStatus")
             
             
         }

@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import SwiftyJSON
 
 //This viewController is used for both adding New Habit and also Edit/Detail view
 //We'll set a variable to see if this is new (don't populate or not), or if habit is not passed in, then assuming this is new
@@ -93,6 +94,8 @@ class HabitViewController: UITableViewController {
             scheduleEnum = (habit?.schedule.scheduleType)!
             daysArray = (habit?.schedule.days)!
             
+            self.setUpSelectedPlant();
+            
             self.title = "\(h.title)"
 
         }else{
@@ -153,7 +156,7 @@ class HabitViewController: UITableViewController {
 
         if !isEdit{
             
-            habit = PAHHabit(title: habitTitleTextField.text!, note: noteTextField.text!, plantType: "test")
+            habit = PAHHabit(title: habitTitleTextField.text!, note: noteTextField.text!, plantType: "testBush")
             habit?.schedule = schedule
             
         }else{
@@ -235,7 +238,7 @@ class HabitViewController: UITableViewController {
     }
     
     
-    // Mark: Schedule and Days buttons
+    // MARK: Schedule and Days buttons
     
     
     //Used during startup/init
@@ -336,6 +339,43 @@ class HabitViewController: UITableViewController {
         
     }
     
+    // MARK: Plant cells
+    
+    //Show plant details
+    func setUpSelectedPlant(){
+        
+        plantTypeLabel.text = habit?.plantType
+        plantStatusLabel.text = habit?.plantStatus.rawValue
+        
+        //Loading plantQuotes from plantQuotes.json
+        if let path = NSBundle.mainBundle().pathForResource("plantQuotes", ofType: "json"){
+            do{
+                let data = try NSData(contentsOfURL: NSURL(fileURLWithPath: path), options: NSDataReadingOptions.DataReadingMappedIfSafe)
+                let json = JSON(data: data)
+                plantQuoteLabel.text = json["plantQuotes"][plantTypeLabel.text!][plantStatusLabel.text!].string
+                
+            }catch let error as NSError{
+                print(error.localizedDescription)
+                plantQuoteLabel.text = "Cannot parse JSON!"
+            }
+        }else{
+            plantQuoteLabel.text = "Cannot find quotes!"
+        }
+        
+        
+        //Selected Plant Cell
+//        @IBOutlet weak var plantImage: UIImageView!
+//        @IBOutlet weak var plantTypeLabel: UILabel!
+//        @IBOutlet weak var plantStatusLabel: UILabel!
+//        @IBOutlet weak var plantQuoteLabel: UILabel!
+        
+    
+    }
+    
+    //Show plants for selection
+    func setUpPlantCollectionView(){
+        
+    }
 
     
     // MARK: TableView functions

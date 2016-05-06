@@ -22,8 +22,9 @@ class PAHHabit: NSObject {
     
     //TODO: how to init this
     // Use plantType for now
-    var plant: PAHPlant?
-    var plantType: String = "bush"
+    //var plant: PAHPlant?
+    var plantType: String = "testBush"
+    var plantStatus: PAHPlant.Growth = .None
     var uid: String?
     
     
@@ -41,7 +42,6 @@ class PAHHabit: NSObject {
         self.note = (coreDataObj.valueForKey("note") as? String)!
         self.completeCount = (coreDataObj.valueForKey("completeCount") as? Int)!
         self.totalCount = (coreDataObj.valueForKey("totalCount") as? Int)!
-        self.plantType = (coreDataObj.valueForKey("plantType") as? String)!
         self.uid = (coreDataObj.valueForKey("uid") as? String)!
         
         //Schedule
@@ -56,10 +56,15 @@ class PAHHabit: NSObject {
         
         //Plant
         
+        self.plantType = (coreDataObj.valueForKey("plantType") as? String)!
+        
+        let plantStatString = (coreDataObj.valueForKey("plantStatus") as? String)!
+        self.plantStatus = PAHPlant.Growth(rawValue: plantStatString)!
         
 
     }
     
+    //Init from UI
     //Schedule is not required, since we have default
     init(title: String, note: String, plantType: String){
         self.title = title
@@ -68,6 +73,8 @@ class PAHHabit: NSObject {
         self.schedule.habitUID = self.uid
         
         print("id is \(self.uid)")
+        
+        self.plantType = plantType
         
         
         

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '921FE0A34EE8D74EF72F7EA2'
+               BlueprintIdentifier = '1D25BF7CF2CBA3A4F1774A7E'
                BlueprintName = 'Pods-PlantAHabit'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-PlantAHabit.a'>
+               BuildableName = 'Pods_PlantAHabit.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
