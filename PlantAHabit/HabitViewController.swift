@@ -344,15 +344,18 @@ class HabitViewController: UITableViewController {
     //Show plant details
     func setUpSelectedPlant(){
         
-        plantTypeLabel.text = habit?.plantType
-        plantStatusLabel.text = habit?.plantStatus.rawValue
+        let plantType = habit?.plantType
+        let plantStatus = habit?.plantStatus.rawValue
+        
+        plantTypeLabel.text = plantType
+        plantStatusLabel.text = plantStatus
         
         //Loading plantQuotes from plantQuotes.json
         if let path = NSBundle.mainBundle().pathForResource("plantQuotes", ofType: "json"){
             do{
                 let data = try NSData(contentsOfURL: NSURL(fileURLWithPath: path), options: NSDataReadingOptions.DataReadingMappedIfSafe)
                 let json = JSON(data: data)
-                plantQuoteLabel.text = json["plantQuotes"][plantTypeLabel.text!][plantStatusLabel.text!].string
+                plantQuoteLabel.text = json["plantQuotes"][plantType!][plantStatus!].string
                 
             }catch let error as NSError{
                 print(error.localizedDescription)
@@ -361,6 +364,9 @@ class HabitViewController: UITableViewController {
         }else{
             plantQuoteLabel.text = "Cannot find quotes!"
         }
+        
+        let plantImageName = plantType! + "-" + plantStatus!
+        plantImage.image = UIImage(named: plantImageName)
         
         
         //Selected Plant Cell

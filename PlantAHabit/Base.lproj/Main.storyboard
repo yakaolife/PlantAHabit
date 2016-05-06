@@ -152,39 +152,44 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="169.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Usd-VN-Y56">
-                                                    <rect key="frame" x="22" y="8" width="150" height="150"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Usd-VN-Y56">
+                                                    <rect key="frame" x="18" y="8" width="150" height="150"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="KMd-eh-wzi"/>
+                                                        <constraint firstAttribute="height" constant="150" id="kuP-XR-0a2"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xib-0P-hKr">
-                                                    <rect key="frame" x="180" y="8" width="77" height="21"/>
+                                                    <rect key="frame" x="176" y="8" width="77" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ska-bz-XNj">
-                                                    <rect key="frame" x="180" y="37" width="50" height="21"/>
+                                                    <rect key="frame" x="176" y="37" width="50" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Funny quotes and stuff, may need to use a json file" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwP-PM-tJ9">
-                                                    <rect key="frame" x="180" y="66" width="388" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Funny quotes and stuff, may need to use a json file" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwP-PM-tJ9">
+                                                    <rect key="frame" x="176" y="66" width="407" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Usd-VN-Y56" firstAttribute="leading" secondItem="JH7-eg-YGv" secondAttribute="leadingMargin" constant="14" id="2Hv-Ry-4cv"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="pwP-PM-tJ9" secondAttribute="trailing" constant="24" id="2gE-xl-on6"/>
-                                                <constraint firstItem="Xib-0P-hKr" firstAttribute="leading" secondItem="Usd-VN-Y56" secondAttribute="trailing" constant="8" symbolic="YES" id="DdT-2D-vgh"/>
-                                                <constraint firstItem="Ska-bz-XNj" firstAttribute="leading" secondItem="pwP-PM-tJ9" secondAttribute="leading" id="Eb4-Dp-v92"/>
-                                                <constraint firstItem="Usd-VN-Y56" firstAttribute="top" secondItem="JH7-eg-YGv" secondAttribute="topMargin" id="I9G-aw-9jS"/>
-                                                <constraint firstItem="Ska-bz-XNj" firstAttribute="top" secondItem="Xib-0P-hKr" secondAttribute="bottom" constant="8" symbolic="YES" id="Stc-If-vJ9"/>
-                                                <constraint firstItem="Xib-0P-hKr" firstAttribute="leading" secondItem="Ska-bz-XNj" secondAttribute="leading" id="hd5-fa-6wY"/>
-                                                <constraint firstItem="pwP-PM-tJ9" firstAttribute="top" secondItem="Ska-bz-XNj" secondAttribute="bottom" constant="8" symbolic="YES" id="i0k-un-05r"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Usd-VN-Y56" secondAttribute="bottom" constant="3.5" id="j1J-7K-8MQ"/>
-                                                <constraint firstItem="Usd-VN-Y56" firstAttribute="top" secondItem="Xib-0P-hKr" secondAttribute="top" id="n7d-zO-FOb"/>
+                                                <constraint firstAttribute="topMargin" secondItem="Usd-VN-Y56" secondAttribute="top" id="0j5-PC-ysm"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Usd-VN-Y56" secondAttribute="bottom" constant="3.5" id="3rT-Qi-QPP"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="pwP-PM-tJ9" secondAttribute="trailing" constant="9" id="8Hf-gK-56m"/>
+                                                <constraint firstItem="Ska-bz-XNj" firstAttribute="leading" secondItem="Xib-0P-hKr" secondAttribute="leading" id="ELR-0u-Uys"/>
+                                                <constraint firstItem="Xib-0P-hKr" firstAttribute="leading" secondItem="Usd-VN-Y56" secondAttribute="trailing" constant="8" id="MJs-3M-GHt"/>
+                                                <constraint firstItem="pwP-PM-tJ9" firstAttribute="leading" secondItem="Ska-bz-XNj" secondAttribute="leading" id="ObF-IV-4aT"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="pwP-PM-tJ9" secondAttribute="bottom" constant="10" id="XzO-Nq-Jdb"/>
+                                                <constraint firstItem="Usd-VN-Y56" firstAttribute="leading" secondItem="JH7-eg-YGv" secondAttribute="leadingMargin" constant="10" id="cFE-Nd-cTx"/>
+                                                <constraint firstItem="Ska-bz-XNj" firstAttribute="top" secondItem="Xib-0P-hKr" secondAttribute="bottom" constant="8" id="dVD-M4-ZwZ"/>
+                                                <constraint firstAttribute="topMargin" secondItem="Xib-0P-hKr" secondAttribute="top" id="i2f-fz-rHI"/>
+                                                <constraint firstItem="pwP-PM-tJ9" firstAttribute="top" secondItem="Ska-bz-XNj" secondAttribute="bottom" constant="8" id="wk6-gN-DEn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
